@@ -1,0 +1,1569 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io/LFDS/releases/0.0.1",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io/LFDS/releases/0.0.1",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.assesses",
+          "sh:class": "http://data.europa.eu/2sa/cav#Asset",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/77c3f3351cf9ad07e57a72992174114d1c133edd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.isprovidedby",
+          "sh:description": {
+            "en": "Agent that transmits the Assessment"
+          },
+          "sh:name": {
+            "en": "is provided by"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/isProvidedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.isprovidedby",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "Agent that transmits the Assessment"
+          },
+          "sh:name": {
+            "en": "is provided by"
+          },
+          "sh:path": "http://data.europa.eu/m8g/isProvidedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/8501022f89495be75c7fe71eb1d7bb0aeb4f3064",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.isprovidedby",
+          "sh:description": {
+            "en": "Agent that transmits the Assessment"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is provided by"
+          },
+          "sh:path": "http://data.europa.eu/m8g/isProvidedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/9e05ee20692449c9a40295851d47556bee8ad6cc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.resultsin",
+          "sh:class": "http://data.europa.eu/2sa/cav#Statement",
+          "sh:description": {
+            "en": "The creation of the statements resulting from the assessment."
+          },
+          "sh:name": {
+            "en": "results in"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#resultsIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/ae8ce6b6172f73af3138b326c707e8521923ac3b",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/b2faf6881126d26d68f45976089a43918fe556f6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.resultsin",
+          "sh:description": {
+            "en": "The creation of the statements resulting from the assessment."
+          },
+          "sh:name": {
+            "en": "results in"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#resultsIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/c0070628e43ac62c563764409d0813f46c59737f",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.isprovidedby",
+          "sh:description": {
+            "en": "Agent that transmits the Assessment"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "is provided by"
+          },
+          "sh:path": "http://data.europa.eu/m8g/isProvidedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/ca8d20b8541e80306131c535e919a3e09e9aa511",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.resultsin",
+          "sh:description": {
+            "en": "The creation of the statements resulting from the assessment."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "results in"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#resultsIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssessmentShape/cf63416b6fb6ea4c4e5a4610c09f897ea54bd205",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/2sa/cav#Assessment"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/19f6de267036c30c67819273f5e8a4eedb68e228",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.ispartof",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/1ebd615995cc8d6efae5e595f05efaa45b018640",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.constrains",
+          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
+          "sh:description": {
+            "en": "Information Concept about which a Constraint expresses a limitation."
+          },
+          "sh:name": {
+            "en": "constrains"
+          },
+          "sh:path": "http://data.europa.eu/m8g/constrains"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.ispartof",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.landingpage",
+          "sh:description": {
+            "en": "A web page that provides access to the Dataset, its Distributions and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/30f9d5dc387c26cd181ecaf79a783dde08b13f17",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.valuedescription",
+          "sh:description": {
+            "en": "Brief description of the Asset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "value description"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#valueDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/3253331fcb1cd3f2e87fbaef799d58ece408a646",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.ispartof",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/3b78835d1d36a7d898c0cb91877dc26cf0c2ad8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.References",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:description": {
+            "en": "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
+          },
+          "sh:name": {
+            "en": "References"
+          },
+          "sh:path": "http://purl.org/dc/terms/references"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.title",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "\tA name given to the resource."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/49a8d6e4fe7aa6f0addb4ed11d01108c6348d433",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.page",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this thing."
+          },
+          "sh:name": {
+            "en": "page"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/4ef8c7abbb7a2b31c01b069985366a78241a90dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.constrains",
+          "sh:description": {
+            "en": "Information Concept about which a Constraint expresses a limitation."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "constrains"
+          },
+          "sh:path": "http://data.europa.eu/m8g/constrains"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/53250fc5eb79cc3dc36ee2690f966b44eb3cde1a",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.valuedescription",
+          "sh:description": {
+            "en": "Brief description of the Asset."
+          },
+          "sh:name": {
+            "en": "value description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/2sa/cav#valueDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/5871eb562969e2a4f395c8424314cc119686e019",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.relation",
+          "sh:description": {
+            "en": "A related resource."
+          },
+          "sh:name": {
+            "en": "relation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/590ceab8c0f9ceb8638757fcab316fad83700043",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.constrains",
+          "sh:description": {
+            "en": "Information Concept about which a Constraint expresses a limitation."
+          },
+          "sh:name": {
+            "en": "constrains"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/constrains"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/5d3b501368b0e6230133103390ac50e7385e214a",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.ispartof",
+          "sh:class": "http://iflastandards.info/ns/fr/frbr/frbroo/Work",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/8ea5dbc8f99291b81e441d1a5666a22f1c4d3608",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.valuedescription",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Brief description of the Asset."
+          },
+          "sh:name": {
+            "en": "value description"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#valueDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.title",
+          "sh:description": {
+            "en": "\tA name given to the resource."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/b2022e46cdd278e120492d597d45342f243b13f7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.documentedin",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "A link to any information supporting the value of the asset and any \nother related relevant details."
+          },
+          "sh:name": {
+            "en": "documented in"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#documentedIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/b7aa98e1befa5130659568aa62e7f38575dc17c1",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.relation",
+          "sh:class": "http://www.w3.org/ns/adms#Asset",
+          "sh:description": {
+            "en": "A related resource."
+          },
+          "sh:name": {
+            "en": "relation"
+          },
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/c1605e7eee91579de3df40d771e03a44a59d8ed3",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.valuedescription",
+          "sh:description": {
+            "en": "Brief description of the Asset."
+          },
+          "sh:name": {
+            "en": "value description"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#valueDescription",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.title",
+          "sh:description": {
+            "en": "\tA name given to the resource."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/e01a029c4261523e200797d76594446ed5005ff2",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.References",
+          "sh:description": {
+            "en": "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
+          },
+          "sh:name": {
+            "en": "References"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/references"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/ef2c104f9bc5019523318900356723ac0a8500e2",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.hasparticipation",
+          "sh:description": {
+            "en": "The way how a resource is organized."
+          },
+          "sh:name": {
+            "en": "has participation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/hasParticipation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/f04655e0c2d7e379bc84d56c6c34095087b32fe7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.documentedin",
+          "sh:description": {
+            "en": "A link to any information supporting the value of the asset and any \nother related relevant details."
+          },
+          "sh:name": {
+            "en": "documented in"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/2sa/cav#documentedIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/f67a7eac23a6765471f8d867cc7ba256bea49ce3",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.page",
+          "sh:description": {
+            "en": "A page or document about this thing."
+          },
+          "sh:name": {
+            "en": "page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.title",
+          "sh:description": {
+            "en": "\tA name given to the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/fb0f4ce42568457dd68730013f20f7749a22ad39",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.hasparticipation",
+          "sh:class": "http://data.europa.eu/m8g/Participation",
+          "sh:description": {
+            "en": "The way how a resource is organized."
+          },
+          "sh:name": {
+            "en": "has participation"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasParticipation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AssetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Asset.landingpage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that provides access to the Dataset, its Distributions and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/adms#Asset"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/07a0274a8a68299fecf732d169f3bb5ab0a8f95d",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.interpretation",
+          "sh:description": {
+            "en": "The favourability perception of the statement (e.g. positive,"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "interpretation"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#interpretation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/49a8d6e4fe7aa6f0addb4ed11d01108c6348d433",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.page",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:name": {
+            "en": "page"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.type",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/50a278b580af7f10bcb00d4ac1520b892ff0106f",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.hasrelatedservice",
+          "sh:description": {
+            "en": "The Public Service related to the Statement"
+          },
+          "sh:name": {
+            "en": "has related service"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/hasRelatedService"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.type",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/8a9e187b1ac7957f5eb60ddf074e3eefe43e69eb",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.judgement",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The text expressing the statements resulting value judgement."
+          },
+          "sh:name": {
+            "en": "judgement"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#judgement"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/98ffe17542e29f8ee6f4efc5a05f436a0f94345d",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.judgement",
+          "sh:description": {
+            "en": "The text expressing the statements resulting value judgement."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "judgement"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#judgement"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/9ebf1b5d8a196fa0a4b586139d2f450121292fa0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.judgement",
+          "sh:description": {
+            "en": "The text expressing the statements resulting value judgement."
+          },
+          "sh:name": {
+            "en": "judgement"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/2sa/cav#judgement"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/a39bd847a22757fc8b40eb45e77f8f361673fcc1",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.interpretation",
+          "sh:description": {
+            "en": "The favourability perception of the statement (e.g. positive,"
+          },
+          "sh:name": {
+            "en": "interpretation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#interpretation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/b294397dcc861f6573c6465d2465e0b5140589c2",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.hasrelatedservice",
+          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
+          "sh:description": {
+            "en": "The Public Service related to the Statement"
+          },
+          "sh:name": {
+            "en": "has related service"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasRelatedService"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/e2d0d5eedfd41ec2069031a080f5dee685c8c218",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.interpretation",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The favourability perception of the statement (e.g. positive,"
+          },
+          "sh:name": {
+            "en": "interpretation"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#interpretation"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/f67a7eac23a6765471f8d867cc7ba256bea49ce3",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.page",
+          "sh:name": {
+            "en": "page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#StatementShape/fa72091311d810c1892a6fea7709976d4e13c197",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Statement.judgement",
+          "sh:description": {
+            "en": "The text expressing the statements resulting value judgement."
+          },
+          "sh:name": {
+            "en": "judgement"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#judgement",
+          "sh:uniqueLang": "true"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/2sa/cav#Statement"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A classification assigned to a Participation."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.type",
+          "sh:description": {
+            "en": "A classification assigned to a Participation."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Participation."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.description",
+          "sh:description": {
+            "en": "A textual explanation of the Participation."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.type",
+          "sh:description": {
+            "en": "A classification assigned to a Participation."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.description",
+          "sh:description": {
+            "en": "A textual explanation of the Participation."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.description",
+          "sh:description": {
+            "en": "A textual explanation of the Participation."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/91fca326def04ee4ef7ed1efba4e59fae00d1faa",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.role",
+          "sh:description": {
+            "en": "The function of an Agent within a Participation."
+          },
+          "sh:name": {
+            "en": "role"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/role"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/96872d3a91278412b47d750ed71a4938984306c0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.role",
+          "sh:description": {
+            "en": "The function of an Agent within a Participation."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "role"
+          },
+          "sh:path": "http://data.europa.eu/m8g/role"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Participation."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Participation."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/d2254b8259635ec986bc7c65b0227299193c6c16",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.role",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The function of an Agent within a Participation."
+          },
+          "sh:name": {
+            "en": "role"
+          },
+          "sh:path": "http://data.europa.eu/m8g/role"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A textual explanation of the Participation."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/ef2c104f9bc5019523318900356723ac0a8500e2",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.hasparticipation",
+          "sh:description": {
+            "en": "The Agent involved in the Participation."
+          },
+          "sh:name": {
+            "en": "has participation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/hasParticipant"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ParticipationShape/fb0f4ce42568457dd68730013f20f7749a22ad39",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Participation.hasparticipation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "The Agent involved in the Participation."
+          },
+          "sh:name": {
+            "en": "has participation"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasParticipant"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Participation"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.preferredlabel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.description",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.description",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.description",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.spatial",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "This property links an Organization to the Administrative Region(s) that it covers."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/b93b49bf7122a561ecc9674449665256e441faf5",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.spatial",
+          "sh:description": {
+            "en": "This property links an Organization to the Administrative Region(s) that it covers."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisationShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.description",
+          "sh:description": {
+            "en": "A free text Description of the resource"
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.description",
+          "sh:description": {
+            "en": "A free text Description of the resource"
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.description",
+          "sh:description": {
+            "en": "A free text Description of the resource"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/9caf9e629daa0e64ece77788576468821d7cff8c",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/b2022e46cdd278e120492d597d45342f243b13f7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.documentedin",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "A link to any information supporting the value of the work and any other related relevant details."
+          },
+          "sh:name": {
+            "en": "documented in"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#documentedIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A free text Description of the resource"
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#WorkShape/f04655e0c2d7e379bc84d56c6c34095087b32fe7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#work.documentedin",
+          "sh:description": {
+            "en": "A link to any information supporting the value of the work and any other related relevant details."
+          },
+          "sh:name": {
+            "en": "documented in"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/2sa/cav#documentedIn"
+        }
+      ],
+      "sh:targetClass": "http://iflastandards.info/ns/fr/frbr/frbroo/Work"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Location.geographicidentifier",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "A reference in the form of a Uniform Resource Identifier to the Location."
+          },
+          "sh:name": {
+            "en": "geographic identifier"
+          },
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Location.geographicidentifier",
+          "sh:description": {
+            "en": "A reference in the form of a Uniform Resource Identifier to the Location."
+          },
+          "sh:name": {
+            "en": "geographic identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.identifier",
+          "sh:description": {
+            "en": "A formally-issued Identifier for the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.description",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.description",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.description",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.spatial",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "Spatial characteristics of the resource."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/9caf9e629daa0e64ece77788576468821d7cff8c",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.identifier",
+          "sh:description": {
+            "en": "A formally-issued Identifier for the Public Service."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/b93b49bf7122a561ecc9674449665256e441faf5",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.spatial",
+          "sh:description": {
+            "en": "Spatial characteristics of the resource."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.name",
+          "sh:description": {
+            "en": "A name given to the resource."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title",
+          "sh:uniqueLang": "true"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#PublicService.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#TextShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#LiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#URIShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#CodeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ResourceShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Resource.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#ResourceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Resource.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The noun given to the Agent."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A classification assigned to an Agent."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.type",
+          "sh:description": {
+            "en": "A classification assigned to an Agent."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.name",
+          "sh:description": {
+            "en": "The noun given to the Agent."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/9caf9e629daa0e64ece77788576468821d7cff8c",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.name",
+          "sh:description": {
+            "en": "The noun given to the Agent."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#AgentShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.0.1#Agent.name",
+          "sh:description": {
+            "en": "The noun given to the Agent."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title",
+          "sh:uniqueLang": "true"
+        }
+      ],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
+    },
+    {
+      "@id": "https://semiceu.github.io/LFDS/releases/0.0.1#DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    }
+  ]
+}
