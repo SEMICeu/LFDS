@@ -123,6 +123,9 @@
           "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlowShape/4a0116bdf45cf259a510bea7f2df520f2a470afb",
           "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlow.hasfrequency",
           "sh:class": "http://data.europa.eu/2qy/rrmv#Frequency",
+          "sh:description": {
+            "en": "The Frequency in which the Action is to be executed."
+          },
           "sh:name": {
             "en": "has frequency"
           },
@@ -155,6 +158,9 @@
         {
           "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlowShape/eefa546b377f13c9023494cd371dba05ab5e1db5",
           "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlow.hasfrequency",
+          "sh:description": {
+            "en": "The Frequency in which the Action is to be executed."
+          },
           "sh:name": {
             "en": "has frequency"
           },
@@ -221,25 +227,25 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f922aeb9a8d2c459d9077468bb1d215de840f8e7",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.Category",
+          "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.category",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The Categroy of the Requirement."
+            "en": "The categroy of the Requirement."
           },
           "sh:name": {
-            "en": "Category"
+            "en": "category"
           },
           "sh:path": "http://data.europa.eu/2qy/lfds#RequirementCategory"
         },
         {
-          "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/fea227be81a8b8645face1b2a8537c24c5f22ca8",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.Category",
+          "@id": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.category",
           "sh:description": {
-            "en": "The Categroy of the Requirement."
+            "en": "The categroy of the Requirement."
           },
           "sh:name": {
-            "en": "Category"
+            "en": "category"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/2qy/lfds#RequirementCategory"

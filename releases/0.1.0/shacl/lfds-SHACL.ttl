@@ -331,6 +331,7 @@
 
 <https://semiceu.github.io/LFDS/releases/0.1.0#DataFlowShape/4a0116bdf45cf259a510bea7f2df520f2a470afb> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlow.hasfrequency";
   shacl:class <http://data.europa.eu/2qy/rrmv#Frequency>;
+  shacl:description "The Frequency in which the Action is to be executed."@en;
   shacl:name "has frequency"@en;
   shacl:path <http://data.europa.eu/2qy/lfds#hasFrequency> .
 
@@ -347,6 +348,7 @@
   shacl:path <http://data.europa.eu/2qy/lfds#trigger> .
 
 <https://semiceu.github.io/LFDS/releases/0.1.0#DataFlowShape/eefa546b377f13c9023494cd371dba05ab5e1db5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#DataFlow.hasfrequency";
+  shacl:description "The Frequency in which the Action is to be executed."@en;
   shacl:name "has frequency"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/2qy/lfds#hasFrequency> .
@@ -903,19 +905,19 @@
 
 <https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f922aeb9a8d2c459d9077468bb1d215de840f8e7>,
-    <https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/fea227be81a8b8645face1b2a8537c24c5f22ca8>;
+  shacl:property <https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5>,
+    <https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f>;
   shacl:targetClass <http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance> .
 
-<https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f922aeb9a8d2c459d9077468bb1d215de840f8e7> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.Category";
+<https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.category";
   shacl:class skos:Concept;
-  shacl:description "The Categroy of the Requirement."@en;
-  shacl:name "Category"@en;
+  shacl:description "The categroy of the Requirement."@en;
+  shacl:name "category"@en;
   shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
 
-<https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/fea227be81a8b8645face1b2a8537c24c5f22ca8> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.Category";
-  shacl:description "The Categroy of the Requirement."@en;
-  shacl:name "Category"@en;
+<https://semiceu.github.io/LFDS/releases/0.1.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/0.1.0#RequirementofDigitalRelevance.category";
+  shacl:description "The categroy of the Requirement."@en;
+  shacl:name "category"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
 

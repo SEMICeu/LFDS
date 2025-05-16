@@ -26,11 +26,6 @@
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
-    "Category": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/2qy/lfds#RequirementCategory",
-      "@type": "@id"
-    },
     "Code": "http://www.w3.org/2004/02/skos/core#Concept",
     "DataFlow": "http://data.europa.eu/2qy/lfds#DataFlow",
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
@@ -91,6 +86,11 @@
     "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
     "Work": "http://data.europa.eu/eli/ontology#Work",
     "Xsd:anyURI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "category": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/2qy/lfds#RequirementCategory",
+      "@type": "@id"
+    },
     "cav:assesses": {
       "@container": "@set",
       "@id": "http://data.europa.eu/2sa/cav#assesses",
