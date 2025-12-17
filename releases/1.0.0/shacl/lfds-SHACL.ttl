@@ -1,0 +1,1175 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0> rdfs:member <https://semiceu.github.io/LFDS/releases/1.0.0#DataFlowShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentCategoryShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ResultTypeShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RoleTypeShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#TextShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LiteralShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#URIShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#xsd:anyURIShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#xsd:booleanShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#CodeShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#IdentifierShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#SpecificationShape> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/26de3103378473bd7e70743bb33391753f1e6cbd>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/42b85e7761355839394a64b53dfe84ad3337e468>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/50ecc5949fdf82de52aadf3da1bdb127a673ccda>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/67e1d0c918f482cd9c76c12aeea5a89e94843942>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/6bbe3fb4d478d3b403f521e6015063374b5b20f5>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/73346d19590bfb11fb7f63af0fad3072e2df1f68>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/a7eed8c3014ca8497586e9a7048084348a1128b4>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#ActionResult> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/26de3103378473bd7e70743bb33391753f1e6cbd> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hastype";
+  shacl:description "A kind of result "@en;
+  shacl:name "has type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://example.com/rrmv/hasType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/42b85e7761355839394a64b53dfe84ad3337e468> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hastitle";
+  shacl:description "Title of the action result"@en;
+  shacl:name "has title"@en;
+  shacl:path dc:title;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/50ecc5949fdf82de52aadf3da1bdb127a673ccda> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hastitle";
+  shacl:datatype rdf:langString;
+  shacl:description "Title of the action result"@en;
+  shacl:name "has title"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/67e1d0c918f482cd9c76c12aeea5a89e94843942> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hasManifestation";
+  shacl:class dcat:Dataset;
+  shacl:description "The dataset in which an ActionResult is manifested or recorded."@en;
+  shacl:name "has Manifestation"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#hasManifestation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/6bbe3fb4d478d3b403f521e6015063374b5b20f5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hastitle";
+  shacl:description "Title of the action result"@en;
+  shacl:name "has title"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/73346d19590bfb11fb7f63af0fad3072e2df1f68> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hastype";
+  shacl:class <http://data.europa.eu/2qy/rrmv#ResultType>;
+  shacl:description "A kind of result "@en;
+  shacl:name "has type"@en;
+  shacl:path <http://example.com/rrmv/hasType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape/a7eed8c3014ca8497586e9a7048084348a1128b4> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#ActionResult.hasManifestation";
+  shacl:description "The dataset in which an ActionResult is manifested or recorded."@en;
+  shacl:name "has Manifestation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/lfds#hasManifestation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/05d4136f69e729e883bf0a5148835708a27c3654>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/1b985546f308cffd31c56410dc5d8bdc383f3baa>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/2493c833f6a1d61b32b3562aacc5b0f2b2671720>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/3a9a6ee9942ec68c7f8e474de016891d3bfb2f61>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4157698c1c146fa5c5c2f7352b8c61bb04b89a9e>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4a6a9fcb318700b82ae41e86937a5e3081db0428>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4f81f96d0d72e653cb6e4fea26c87354a8eccd1f>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/597c548982e1e92750a3cb4b5d331297595d2b9a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/67a37d46605206e8cd18ac245816a79bad5ec0ab>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/8fe3ff2da55fb4298b1f1979e5ccea3459728cd8>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/bca7ee7647c6e274a04dd716b7c5af0ae99c795d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/e6c0ffb096ab64bdba4fe33b50072d78e3c316cc>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#Action> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/05d4136f69e729e883bf0a5148835708a27c3654> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasagentrole";
+  shacl:description "The involvement of an agent in a role within this action."@en;
+  shacl:name "has agent role"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasAgentRole> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/1b985546f308cffd31c56410dc5d8bdc383f3baa> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.relatedto";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Action>;
+  shacl:description "Indicates a somehow related other document, not necessarily a legal resource."@en;
+  shacl:name "related to"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#related_to> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/2493c833f6a1d61b32b3562aacc5b0f2b2671720> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.attime";
+  shacl:class <http://data.europa.eu/2qy/rrmv#TemporalEntitySpec>;
+  shacl:description "An Action valid within a time interval."@en;
+  shacl:name "at time"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#rrmv:atTime> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/3a9a6ee9942ec68c7f8e474de016891d3bfb2f61> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasnext";
+  shacl:description "A succeeding action "@en;
+  shacl:name "has next"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasNext> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4157698c1c146fa5c5c2f7352b8c61bb04b89a9e> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasPart";
+  shacl:description "A related resource that is a version, edition, or adaptation of the described resource."@en;
+  shacl:name "has Part"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:hasPart .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4a6a9fcb318700b82ae41e86937a5e3081db0428> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasagentrole";
+  shacl:class <http://data.europa.eu/2qy/rrmv#AgentRole>;
+  shacl:description "The involvement of an agent in a role within this action."@en;
+  shacl:name "has agent role"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasAgentRole> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/4f81f96d0d72e653cb6e4fea26c87354a8eccd1f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasnext";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Action>;
+  shacl:description "A succeeding action "@en;
+  shacl:name "has next"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasNext> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/597c548982e1e92750a3cb4b5d331297595d2b9a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasresult";
+  shacl:class <http://data.europa.eu/2qy/rrmv#ActionResult>;
+  shacl:description "A result of an action."@en;
+  shacl:name "has result"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasResult> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/67a37d46605206e8cd18ac245816a79bad5ec0ab> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasresult";
+  shacl:description "A result of an action."@en;
+  shacl:name "has result"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasResult> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/8fe3ff2da55fb4298b1f1979e5ccea3459728cd8> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.relatedto";
+  shacl:description "Indicates a somehow related other document, not necessarily a legal resource."@en;
+  shacl:name "related to"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#related_to> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/bca7ee7647c6e274a04dd716b7c5af0ae99c795d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.attime";
+  shacl:description "An Action valid within a time interval."@en;
+  shacl:name "at time"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#rrmv:atTime> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape/e6c0ffb096ab64bdba4fe33b50072d78e3c316cc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Action.hasPart";
+  shacl:class <http://data.europa.eu/2qy/lfds#WorkFlow>;
+  shacl:description "A related resource that is a version, edition, or adaptation of the described resource."@en;
+  shacl:name "has Part"@en;
+  shacl:path dc:hasPart .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentCategoryShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#AgentCategory> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/1ca2b87a5b5e235de67dc584be390b5878f00e9d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/25b90941e0ca2bf8418ae12a338a168a1cc3812f>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/8b02fcd051692945b0bfe772172c84c4354dc27c>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/e661e9cf1e190828d410fd2ab59d81b83cb3c62f>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#AgentRole> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/1ca2b87a5b5e235de67dc584be390b5878f00e9d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#AgentRole.foragent";
+  shacl:description "The agent for which this AgentRole applies."@en;
+  shacl:name "for agent"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#forAgent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/25b90941e0ca2bf8418ae12a338a168a1cc3812f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#AgentRole.foragent";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Agent>;
+  shacl:description "The agent for which this AgentRole applies."@en;
+  shacl:name "for agent"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#forAgent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/8b02fcd051692945b0bfe772172c84c4354dc27c> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#AgentRole.withrole";
+  shacl:description "The property linking an Agent to Role."@en;
+  shacl:name "with role"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#withRole> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentRoleShape/e661e9cf1e190828d410fd2ab59d81b83cb3c62f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#AgentRole.withrole";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Role>;
+  shacl:description "The property linking an Agent to Role."@en;
+  shacl:name "with role"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#withRole> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape/6c07d071e21b54adece8a56f133fccaba26835d7>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape/f1b01bb2b2dbb2a56c4a8b5eefb6f1eb08aa4451>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#Agent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape/6c07d071e21b54adece8a56f133fccaba26835d7> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Agent.hascategory";
+  shacl:description "Connects the Agent to its AgentCategory."@en;
+  shacl:name "has category"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/rrmv#hasCategory> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AgentShape/f1b01bb2b2dbb2a56c4a8b5eefb6f1eb08aa4451> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Agent.hascategory";
+  shacl:class <http://data.europa.eu/2qy/rrmv#AgentCategory>;
+  shacl:description "Connects the Agent to its AgentCategory."@en;
+  shacl:name "has category"@en;
+  shacl:path <http://data.europa.eu/rrmv#hasCategory> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/9e05ee20692449c9a40295851d47556bee8ad6cc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/b2faf6881126d26d68f45976089a43918fe556f6>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/f13eaa2d652a62dd838cf5747173955e9282dae9>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/f8d2a69a14296a02436c33d1cb2727fb8ba1d626>;
+  shacl:targetClass <http://data.europa.eu/2sa/cav#Assessment> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.type";
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:maxCount 1;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.type";
+  shacl:class skos:Concept;
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.type";
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:name "type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Requirement>,
+    <http://purl.org/vocab/cpsv#PublicService>;
+  shacl:description "The reference to the asset(s) that are the object of the assessment."@en;
+  shacl:name "assesses"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#assesses> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses";
+  shacl:description "The reference to the asset(s) that are the object of the assessment."@en;
+  shacl:name "assesses"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2sa/cav#assesses> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.description";
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc11:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.type";
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:minCount 1;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/9e05ee20692449c9a40295851d47556bee8ad6cc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.resultsin";
+  shacl:class <http://data.europa.eu/2sa/cav#Statement>;
+  shacl:description "The creation of the statements resulting from the assessment."@en;
+  shacl:name "results in"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#resultsIn> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/b2faf6881126d26d68f45976089a43918fe556f6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.resultsin";
+  shacl:description "The creation of the statements resulting from the assessment."@en;
+  shacl:name "results in"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2sa/cav#resultsIn> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/f13eaa2d652a62dd838cf5747173955e9282dae9> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.policy";
+  shacl:description "A URI which identifies a policy."@en;
+  shacl:name "policy"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2qy/lfds#policy> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/f8d2a69a14296a02436c33d1cb2727fb8ba1d626> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.policy";
+  shacl:datatype xsd:anyURI;
+  shacl:description "A URI which identifies a policy."@en;
+  shacl:name "policy"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#policy> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b>;
+  shacl:targetClass <http://data.europa.eu/m8g/BusinessEvent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type";
+  shacl:class skos:Concept;
+  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type";
+  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
+  shacl:name "type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#CodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DataFlowShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/2qy/lfds#DataFlow> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6>;
+  shacl:targetClass dcat:Dataset .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Dataset.description";
+  shacl:description "A free-text account of the distribution."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Dataset.description";
+  shacl:description "A free-text account of the distribution."@en;
+  shacl:minCount 1;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/8f61614144aa7bca188b24f5976593dc08aad0e6>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/c0d17764e84e711728581fda7356a51e99a9040a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
+  shacl:targetClass <http://data.europa.eu/2qy/lfds#DigitalSolution> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.type";
+  shacl:class skos:Concept;
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.title";
+  shacl:datatype rdf:langString;
+  shacl:description """	A name given to the resource."""@en;
+  shacl:name "title"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.type";
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:name "type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.identifier";
+  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:minCount 1;
+  shacl:name "identifier"@en;
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.description";
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.type";
+  shacl:description "The nature or genre of the resource."@en;
+  shacl:minCount 1;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.description";
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/8f61614144aa7bca188b24f5976593dc08aad0e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.description";
+  shacl:description "An account of the resource."@en;
+  shacl:minCount 1;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.title";
+  shacl:description """	A name given to the resource."""@en;
+  shacl:name "title"@en;
+  shacl:path dc:title;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.identifier";
+  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:name "identifier"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/c0d17764e84e711728581fda7356a51e99a9040a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.identifier";
+  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:maxCount 1;
+  shacl:name "identifier"@en;
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.description";
+  shacl:datatype rdf:langString;
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.title";
+  shacl:description """	A name given to the resource."""@en;
+  shacl:name "title"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.identifier";
+  shacl:class <http://www.w3.org/ns/adms#Identifier>;
+  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:name "identifier"@en;
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolution.title";
+  shacl:description """	A name given to the resource."""@en;
+  shacl:minCount 1;
+  shacl:name "title"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/c0d17764e84e711728581fda7356a51e99a9040a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
+  shacl:targetClass <http://data.europa.eu/m8g/Event> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
+  shacl:datatype rdf:langString;
+  shacl:description "The Name (or title) of the Event."@en;
+  shacl:name "name"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
+  shacl:description "An Identifier for the Event."@en;
+  shacl:minCount 1;
+  shacl:name "identifier"@en;
+  shacl:path dc:identifier .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
+  shacl:description "A free text description of the Event."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
+  shacl:description "A free text description of the Event."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
+  shacl:description "The Name (or title) of the Event."@en;
+  shacl:minCount 1;
+  shacl:name "name"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
+  shacl:description "The Name (or title) of the Event."@en;
+  shacl:name "name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
+  shacl:description "An Identifier for the Event."@en;
+  shacl:name "identifier"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:identifier .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
+  shacl:description "The Name (or title) of the Event."@en;
+  shacl:name "name"@en;
+  shacl:path dc:title;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/c0d17764e84e711728581fda7356a51e99a9040a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
+  shacl:description "An Identifier for the Event."@en;
+  shacl:maxCount 1;
+  shacl:name "identifier"@en;
+  shacl:path dc:identifier .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
+  shacl:datatype rdf:langString;
+  shacl:description "A free text description of the Event."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#IdentifierShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/5d3b501368b0e6230133103390ac50e7385e214a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/842604dcbbe4917bc9cdefa599b788f17745f307>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/88a90c213534ac8c4fba6c8b5dfa167be7b35cf1>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/be09b1185e7618f97fa7aee26b523e3b69f359ff>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/c1dd7db4d0fe9532aeac071ed27b1ab7295bd438>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/c9662e1437a7dae8f9dd84bb54b1d9ddf1cb0fc4>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/cbdb40c27622b1c3cc24afbbccdfb6bb131af212>;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalExpression> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.ispartof";
+  shacl:description "Indicates a work in which this one is physically included. Covers the case of text included in an Official Journal, or an article included in a text."@en;
+  shacl:name "is part of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#is_part_of> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/5d3b501368b0e6230133103390ac50e7385e214a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.ispartof";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+  shacl:description "Indicates a work in which this one is physically included. Covers the case of text included in an Official Journal, or an article included in a text."@en;
+  shacl:name "is part of"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#is_part_of> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/842604dcbbe4917bc9cdefa599b788f17745f307> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.cites";
+  shacl:description "Citation in the text of the legislation. This may be at the legal resource or legal expression level, as required by the implementation context. This includes verbatim citation and citations in referrals."@en;
+  shacl:name "cites"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#cites> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/88a90c213534ac8c4fba6c8b5dfa167be7b35cf1> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.isrealizedby";
+  shacl:description "Relates a work to an expression of this work in the form of a \"sequence of signs\" (typically alpha-numeric characters in a legal context)."@en;
+  shacl:name "is realized by"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#realizes> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/be09b1185e7618f97fa7aee26b523e3b69f359ff> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.isrealizedby";
+  shacl:class <http://data.europa.eu/eli/ontology#Work>;
+  shacl:description "Relates a work to an expression of this work in the form of a \"sequence of signs\" (typically alpha-numeric characters in a legal context)."@en;
+  shacl:name "is realized by"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#realizes> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/c1dd7db4d0fe9532aeac071ed27b1ab7295bd438> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.cites";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+  shacl:description "Citation in the text of the legislation. This may be at the legal resource or legal expression level, as required by the implementation context. This includes verbatim citation and citations in referrals."@en;
+  shacl:name "cites"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#cites> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/c9662e1437a7dae8f9dd84bb54b1d9ddf1cb0fc4> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.embodies";
+  shacl:class <http://data.europa.eu/eli/ontology#Manifestation>;
+  shacl:description "Relates a manifestation to the expression that it embodies. Inverse of \"is_embodied_by\"."@en;
+  shacl:name "embodies"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#embodies> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape/cbdb40c27622b1c3cc24afbbccdfb6bb131af212> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpression.embodies";
+  shacl:description "Relates a manifestation to the expression that it embodies. Inverse of \"is_embodied_by\"."@en;
+  shacl:name "embodies"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#embodies> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b>;
+  shacl:targetClass <http://data.europa.eu/m8g/LifeEvent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type";
+  shacl:class skos:Concept;
+  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
+  shacl:name "type"@en;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type";
+  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
+  shacl:name "type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:type .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df>;
+  shacl:targetClass dc:Location .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Location.geographicidentifier";
+  shacl:datatype xsd:anyURI;
+  shacl:description "A reference in the form of a Uniform Resource Identifier to the Location."@en;
+  shacl:name "geographic identifier"@en;
+  shacl:path rdfs:seeAlso .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Location.geographicidentifier";
+  shacl:description "A reference in the form of a Uniform Resource Identifier to the Location."@en;
+  shacl:name "geographic identifier"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path rdfs:seeAlso .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape/79040c0b97b43ae95559b7c15f481545e6667de4>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape/a84e6717e411e965dc1f44b06215051b597b6c12>;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#Manifestation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape/79040c0b97b43ae95559b7c15f481545e6667de4> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Manifestation.isembodiedby";
+  shacl:description "Relates an expression to a manifestation of that expression."@en;
+  shacl:name "is embodied by"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#is_embodied_by> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape/a84e6717e411e965dc1f44b06215051b597b6c12> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Manifestation.isembodiedby";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+  shacl:description "Relates an expression to a manifestation of that expression."@en;
+  shacl:name "is embodied by"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#is_embodied_by> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/9caf9e629daa0e64ece77788576468821d7cff8c>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/b93b49bf7122a561ecc9674449665256e441faf5>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
+  shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.name";
+  shacl:datatype rdf:langString;
+  shacl:description "A name given to the resource."@en;
+  shacl:name "name"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby";
+  shacl:description "It links the Public Service to the Event class."@en;
+  shacl:name "is grouped by"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/isGroupedBy> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.identifier";
+  shacl:description "A formally-issued Identifier for the Public Service."@en;
+  shacl:minCount 1;
+  shacl:name "identifier"@en;
+  shacl:path dc:identifier .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.description";
+  shacl:description "A free text Description of the Public Service."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.description";
+  shacl:description "A free text Description of the Public Service."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.description";
+  shacl:description "A free text Description of the Public Service."@en;
+  shacl:minCount 1;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.spatial";
+  shacl:class dc:Location;
+  shacl:description "Spatial characteristics of the resource."@en;
+  shacl:name "spatial"@en;
+  shacl:path dc:spatial .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.name";
+  shacl:description "A name given to the resource."@en;
+  shacl:minCount 1;
+  shacl:name "name"@en;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/9caf9e629daa0e64ece77788576468821d7cff8c> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.name";
+  shacl:description "A name given to the resource."@en;
+  shacl:name "name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:title .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.identifier";
+  shacl:description "A formally-issued Identifier for the Public Service."@en;
+  shacl:name "identifier"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:identifier .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/b93b49bf7122a561ecc9674449665256e441faf5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.spatial";
+  shacl:description "Spatial characteristics of the resource."@en;
+  shacl:name "spatial"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:spatial .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.name";
+  shacl:description "A name given to the resource."@en;
+  shacl:name "name"@en;
+  shacl:path dc:title;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby";
+  shacl:class <http://data.europa.eu/m8g/Event>;
+  shacl:description "It links the Public Service to the Event class."@en;
+  shacl:name "is grouped by"@en;
+  shacl:path <http://data.europa.eu/m8g/isGroupedBy> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.description";
+  shacl:datatype rdf:langString;
+  shacl:description "A free text Description of the Public Service."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f>;
+  shacl:targetClass <http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category";
+  shacl:class skos:Concept;
+  shacl:description "The categroy of the Requirement."@en;
+  shacl:name "category"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category";
+  shacl:description "The categroy of the Requirement."@en;
+  shacl:name "category"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/19f6de267036c30c67819273f5e8a4eedb68e228>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/1a6f3286627f713c6a6dfdbba5f3b4624260e798>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/1b985546f308cffd31c56410dc5d8bdc383f3baa>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/2056bea37b18598fc6a6529d49c69e54a0c09536>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/2401ba322eff52565884b486cfcc9b2096afabf8>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/25124db62d4f81ecbe0a2898b504e00893d72533>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/3b4bb2f2cb5fc1278944e948cbeb9ee739f10a19>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/465d45838e770ff9a70a996c3cf34973ee605f0a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/53bd38e3d33ba488ee41d290d32c1df211accc84>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/565318b3ee8069d9db4936d133e299a4109228c4>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/5d3b501368b0e6230133103390ac50e7385e214a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/61d3ec2b1eb4ee541999f05c4a695db49038c866>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/837ca7aadb4e9b329c60db5f35ffa3258e9a4dbb>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/87fc4ba3a56d2c8bc011755fa5e97cd3c1713084>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/8fe3ff2da55fb4298b1f1979e5ccea3459728cd8>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/b19f1113c59fce0aa3743160e2952dbb0b46c495>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/b8b696cbf9fa17e3447da768e0631bddfa17fddf>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/c92ef5f014d0753385ed36aeaeda0577163f4f6a>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/f7d5f8cf07af03d1ca7a90f9e69e5a1056326d84>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#Requirement> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/19f6de267036c30c67819273f5e8a4eedb68e228> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.ispartof";
+  shacl:description """ 	A related resource in which the described resource is physically or logically included."""@en;
+  shacl:maxCount 1;
+  shacl:name "is part of"@en;
+  shacl:path dc:isPartOf .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/1a6f3286627f713c6a6dfdbba5f3b4624260e798> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hasTopic";
+  shacl:description "A structure representation of the topic addressed by the Requirement "@en;
+  shacl:name "has Topic"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/lfds#hasTopic> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/1b985546f308cffd31c56410dc5d8bdc383f3baa> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.relatedto";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Requirement>;
+  shacl:description "Indicates a somehow related other document, not necessarily a legal resource."@en;
+  shacl:name "related to"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#related_to> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/2056bea37b18598fc6a6529d49c69e54a0c09536> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.changes";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Requirement>;
+  shacl:description "Indicates that this work or expression legally changes another. This encompasses the notions of amendment, replacement, repeal, or other types of change. This may be a direct change (textual or non-textual amendment) or a consequential or indirect change."@en;
+  shacl:name "changes"@en;
+  shacl:path <http://data.europa.eu/eli/ontology#changes> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/2401ba322eff52565884b486cfcc9b2096afabf8> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.changes";
+  shacl:description "Indicates that this work or expression legally changes another. This encompasses the notions of amendment, replacement, repeal, or other types of change. This may be a direct change (textual or non-textual amendment) or a consequential or indirect change."@en;
+  shacl:name "changes"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#changes> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/25124db62d4f81ecbe0a2898b504e00893d72533> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hastopic";
+  shacl:description "The topic of the request."@en;
+  shacl:name "has topic"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasTopic> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.ispartof";
+  shacl:description """ 	A related resource in which the described resource is physically or logically included."""@en;
+  shacl:name "is part of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:isPartOf .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/3b4bb2f2cb5fc1278944e948cbeb9ee739f10a19> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hasURI";
+  shacl:description "URI of the Request."@en;
+  shacl:name "has URI"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasURI> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/465d45838e770ff9a70a996c3cf34973ee605f0a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hasURI";
+  shacl:datatype xsd:anyURI;
+  shacl:description "URI of the Request."@en;
+  shacl:name "has URI"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasURI> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.produces";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Action>;
+  shacl:description "The action that is produced by a request."@en;
+  shacl:name "produces"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#produces> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/565318b3ee8069d9db4936d133e299a4109228c4> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hasTopic";
+  shacl:class skos:Concept;
+  shacl:description "A structure representation of the topic addressed by the Requirement "@en;
+  shacl:name "has Topic"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#hasTopic> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/5d3b501368b0e6230133103390ac50e7385e214a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.ispartof";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+  shacl:description """ 	A related resource in which the described resource is physically or logically included."""@en;
+  shacl:name "is part of"@en;
+  shacl:path dc:isPartOf .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/61d3ec2b1eb4ee541999f05c4a695db49038c866> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.references";
+  shacl:description "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en;
+  shacl:name "references"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:references .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/837ca7aadb4e9b329c60db5f35ffa3258e9a4dbb> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.references";
+  shacl:class dcat:Resource,
+    <http://data.europa.eu/2qy/lfds#DigitalSolution>;
+  shacl:description "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en;
+  shacl:name "references"@en;
+  shacl:path dc:references .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/87fc4ba3a56d2c8bc011755fa5e97cd3c1713084> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.hastopic";
+  shacl:class skos:Concept;
+  shacl:description "The topic of the request."@en;
+  shacl:name "has topic"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#hasTopic> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/8fe3ff2da55fb4298b1f1979e5ccea3459728cd8> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.relatedto";
+  shacl:description "Indicates a somehow related other document, not necessarily a legal resource."@en;
+  shacl:name "related to"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/eli/ontology#related_to> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/b19f1113c59fce0aa3743160e2952dbb0b46c495> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.requires";
+  shacl:class dcat:Resource;
+  shacl:description "A related resource that is required by the described resource to support its function, delivery, or coherence."@en;
+  shacl:name "requires"@en;
+  shacl:path dc:requires .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/b8b696cbf9fa17e3447da768e0631bddfa17fddf> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.requires";
+  shacl:description "A related resource that is required by the described resource to support its function, delivery, or coherence."@en;
+  shacl:name "requires"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:requires .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.produces";
+  shacl:description "The action that is produced by a request."@en;
+  shacl:name "produces"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/rrmv#produces> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/c92ef5f014d0753385ed36aeaeda0577163f4f6a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.involvesProcess";
+  shacl:description "The process addressed, involved and affected by the requirement."@en;
+  shacl:name "involves Process"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/lfds#involvesProcess> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/f7d5f8cf07af03d1ca7a90f9e69e5a1056326d84> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.involvesProcess";
+  shacl:class skos:Concept;
+  shacl:description "The process addressed, involved and affected by the requirement."@en;
+  shacl:name "involves Process"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#involvesProcess> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape/8f61614144aa7bca188b24f5976593dc08aad0e6>;
+  shacl:targetClass dcat:Resource .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Resource.description";
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ResourceShape/8f61614144aa7bca188b24f5976593dc08aad0e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Resource.description";
+  shacl:description "An account of the resource."@en;
+  shacl:minCount 1;
+  shacl:name "description"@en;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#ResultTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#ResultType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape/26de3103378473bd7e70743bb33391753f1e6cbd>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape/73346d19590bfb11fb7f63af0fad3072e2df1f68>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#Role> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape/26de3103378473bd7e70743bb33391753f1e6cbd> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Role.hastype";
+  shacl:description "A kind of Role "@en;
+  shacl:name "has type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://example.com/rrmv/hasType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RoleShape/73346d19590bfb11fb7f63af0fad3072e2df1f68> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Role.hastype";
+  shacl:class <http://data.europa.eu/2qy/rrmv#RoleType>;
+  shacl:description "A kind of Role "@en;
+  shacl:name "has type"@en;
+  shacl:path <http://example.com/rrmv/hasType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#RoleTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#RoleType> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#SpecificationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#SpecificationShape/6cae9880e515253132af1452a38a8a5827165149>;
+  shacl:targetClass <https://data.europa.eu/2sa/cssv#Specification> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#SpecificationShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Specification.description";
+  shacl:description "An account of the resource."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/07a0274a8a68299fecf732d169f3bb5ab0a8f95d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/8a9e187b1ac7957f5eb60ddf074e3eefe43e69eb>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/98ffe17542e29f8ee6f4efc5a05f436a0f94345d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/9ebf1b5d8a196fa0a4b586139d2f450121292fa0>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/a39bd847a22757fc8b40eb45e77f8f361673fcc1>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/e2d0d5eedfd41ec2069031a080f5dee685c8c218>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/fa72091311d810c1892a6fea7709976d4e13c197>;
+  shacl:targetClass <http://data.europa.eu/2sa/cav#Statement> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/07a0274a8a68299fecf732d169f3bb5ab0a8f95d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.interpretation";
+  shacl:description "The favourability perception of the statement (e.g. positive, negative or neutral)."@en;
+  shacl:minCount 1;
+  shacl:name "interpretation"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#interpretation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.type";
+  shacl:class skos:Concept;
+  shacl:description "The categorisation of the statement."@en;
+  shacl:name "type"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#type> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.type";
+  shacl:description "The categorisation of the statement."@en;
+  shacl:name "type"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2sa/cav#type> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.type";
+  shacl:description "The categorisation of the statement."@en;
+  shacl:minCount 1;
+  shacl:name "type"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#type> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/8a9e187b1ac7957f5eb60ddf074e3eefe43e69eb> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.judgement";
+  shacl:datatype rdf:langString;
+  shacl:description "The text expressing the statement's resulting value judgement."@en;
+  shacl:name "judgement"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#judgement> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/98ffe17542e29f8ee6f4efc5a05f436a0f94345d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.judgement";
+  shacl:description "The text expressing the statement's resulting value judgement."@en;
+  shacl:minCount 1;
+  shacl:name "judgement"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#judgement> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/9ebf1b5d8a196fa0a4b586139d2f450121292fa0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.judgement";
+  shacl:description "The text expressing the statement's resulting value judgement."@en;
+  shacl:name "judgement"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2sa/cav#judgement> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/a39bd847a22757fc8b40eb45e77f8f361673fcc1> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.interpretation";
+  shacl:description "The favourability perception of the statement (e.g. positive, negative or neutral)."@en;
+  shacl:name "interpretation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2sa/cav#interpretation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/e2d0d5eedfd41ec2069031a080f5dee685c8c218> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.interpretation";
+  shacl:class skos:Concept;
+  shacl:description "The favourability perception of the statement (e.g. positive, negative or neutral)."@en;
+  shacl:name "interpretation"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#interpretation> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#StatementShape/fa72091311d810c1892a6fea7709976d4e13c197> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Statement.judgement";
+  shacl:description "The text expressing the statement's resulting value judgement."@en;
+  shacl:name "judgement"@en;
+  shacl:path <http://data.europa.eu/2sa/cav#judgement>;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/d900dec8e8c7d9b2a7be9b4f9db7d1d5ff924b5b>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/dfa672dba7ecc9d2518cedc520eaa8b94da07a5c>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/efeb429cda1e317bdfcd0b723ae00d491233fabe>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/fb4e2302c35ddee264a6a479647b544e1d4f5e0f>;
+  shacl:targetClass <http://data.europa.eu/2qy/rrmv#TemporalEntitySpec> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/d900dec8e8c7d9b2a7be9b4f9db7d1d5ff924b5b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecification.externalevent";
+  shacl:datatype xsd:boolean;
+  shacl:description "Indicates whether a temporal entity specification depends on events outside the regulatory framework's direct control."@en;
+  shacl:name "external event"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#externalEvent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/dfa672dba7ecc9d2518cedc520eaa8b94da07a5c> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecification.isunspecified";
+  shacl:description "Indicates whether a temporal aspect exists but is undefined."@en;
+  shacl:name "is unspecified"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2qy/rrmv#isUnspecified> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/efeb429cda1e317bdfcd0b723ae00d491233fabe> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecification.isunspecified";
+  shacl:datatype xsd:boolean;
+  shacl:description "Indicates whether a temporal aspect exists but is undefined."@en;
+  shacl:name "is unspecified"@en;
+  shacl:path <http://data.europa.eu/2qy/rrmv#isUnspecified> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecShape/fb4e2302c35ddee264a6a479647b544e1d4f5e0f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#TemporalEntitySpecification.externalevent";
+  shacl:description "Indicates whether a temporal entity specification depends on events outside the regulatory framework's direct control."@en;
+  shacl:name "external event"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2qy/rrmv#externalEvent> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#TextShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#URIShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/0c9a80a6d0ce7f29c71f720493e319ebe80c940e>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/124de359384e2deb752f3fb00d3b3c75460aab24>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/1ad764450beeae7e27117424ab5b142f6bd917bb>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/244db9570010125d7e3a9d9d4e0fba8dd1b9224d>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/4ce0830355079c6979ac17596eed1379a8f84572>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/6d46887e8e0ab653b74cac909abf29dec93c8321>,
+    <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/a6f4159c0fe670359f8b8e9d40345f317030b4aa>;
+  shacl:targetClass <http://data.europa.eu/2qy/lfds#WorkFlow> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/0c9a80a6d0ce7f29c71f720493e319ebe80c940e> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.high-levelProcess";
+  shacl:class skos:Concept;
+  shacl:description "A categorisation indicating the group or type of processes the workflow belongs to"@en;
+  shacl:name "high-level Process"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#highlevelProcess> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/124de359384e2deb752f3fb00d3b3c75460aab24> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.high-levelProcess";
+  shacl:description "A categorisation indicating the group or type of processes the workflow belongs to"@en;
+  shacl:name "high-level Process"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/2qy/lfds#highlevelProcess> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/1ad764450beeae7e27117424ab5b142f6bd917bb> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.trigger";
+  shacl:description "An event which results in the start of an action."@en;
+  shacl:name "trigger"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/2qy/lfds#trigger> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/244db9570010125d7e3a9d9d4e0fba8dd1b9224d> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.isPartOf";
+  shacl:class <http://data.europa.eu/2qy/rrmv#Action>;
+  shacl:description """ 	A related resource in which the described resource is physically or logically included."""@en;
+  shacl:name "is Part Of"@en;
+  shacl:path dc:isPartOf .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/4ce0830355079c6979ac17596eed1379a8f84572> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.trigger";
+  shacl:description "An event which results in the start of an action."@en;
+  shacl:name "trigger"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#trigger>;
+  shacl:uniqueLang true .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/6d46887e8e0ab653b74cac909abf29dec93c8321> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.trigger";
+  shacl:datatype rdf:langString;
+  shacl:description "An event which results in the start of an action."@en;
+  shacl:name "trigger"@en;
+  shacl:path <http://data.europa.eu/2qy/lfds#trigger> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape/a6f4159c0fe670359f8b8e9d40345f317030b4aa> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlow.isPartOf";
+  shacl:description """ 	A related resource in which the described resource is physically or logically included."""@en;
+  shacl:name "is Part Of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:isPartOf .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#WorkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#Work> .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#xsd:anyURIShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://semiceu.github.io/LFDS/releases/1.0.0#xsd:booleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
