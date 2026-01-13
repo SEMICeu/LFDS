@@ -103,13 +103,6 @@
   "@id": "https://semiceu.github.io/LFDS/releases/1.0.0",
   "shapes": [
     {
-      "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#DataFlowShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://data.europa.eu/2qy/lfds#DataFlow"
-    },
-    {
       "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -296,38 +289,6 @@
         }
       ],
       "sh:targetClass": "http://data.europa.eu/2qy/lfds#DigitalSolution"
-    },
-    {
-      "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category",
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "en": "The categroy of the Requirement."
-          },
-          "sh:name": {
-            "en": "category"
-          },
-          "sh:path": "http://data.europa.eu/2qy/lfds#RequirementCategory"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category",
-          "sh:description": {
-            "en": "The categroy of the Requirement."
-          },
-          "sh:name": {
-            "en": "category"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://data.europa.eu/2qy/lfds#RequirementCategory"
-        }
-      ],
-      "sh:targetClass": "http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance"
     },
     {
       "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape",
@@ -936,7 +897,7 @@
         {
           "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/837ca7aadb4e9b329c60db5f35ffa3258e9a4dbb",
           "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.references",
-          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:class": "http://data.europa.eu/2qy/lfds#DigitalSolution",
           "sh:description": {
             "en": "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
           },
@@ -948,7 +909,7 @@
         {
           "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/837ca7aadb4e9b329c60db5f35ffa3258e9a4dbb",
           "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.references",
-          "sh:class": "http://data.europa.eu/2qy/lfds#DigitalSolution",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
           "sh:description": {
             "en": "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
           },
@@ -1190,7 +1151,19 @@
         {
           "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd",
           "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
-          "sh:class": "http://data.europa.eu/2qy/rrmv#Requirement",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:class": "http://data.europa.eu/2qy/lfds#WorkFlow",
           "sh:description": {
             "en": "The reference to the asset(s) that are the object of the assessment."
           },
@@ -1209,6 +1182,66 @@
           "sh:name": {
             "en": "assesses"
           },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:class": "http://data.europa.eu/2qy/rrmv#Requirement",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:class": "http://data.europa.eu/2qy/lfds#DigitalSolution",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/2sa/cav#assesses"
+        },
+        {
+          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/61cc0dfef321fbb593fd1700c1126d35716316c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses",
+          "sh:description": {
+            "en": "The reference to the asset(s) that are the object of the assessment."
+          },
+          "sh:name": {
+            "en": "assesses"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/2sa/cav#assesses"
         },
         {
@@ -1606,198 +1639,6 @@
       "sh:targetClass": "http://data.europa.eu/eli/ontology#Work"
     },
     {
-      "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type",
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "en": "It links an Event to a controlled vocabulary of event types."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type",
-          "sh:description": {
-            "en": "It links an Event to a controlled vocabulary of event types."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "http://data.europa.eu/m8g/BusinessEvent"
-    },
-    {
-      "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name",
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "en": "The Name (or title) of the Event."
-          },
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier",
-          "sh:description": {
-            "en": "An Identifier for the Event."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6cae9880e515253132af1452a38a8a5827165149",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description",
-          "sh:description": {
-            "en": "A free text description of the Event."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description",
-          "sh:description": {
-            "en": "A free text description of the Event."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "sh:uniqueLang": "true"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name",
-          "sh:description": {
-            "en": "The Name (or title) of the Event."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name",
-          "sh:description": {
-            "en": "The Name (or title) of the Event."
-          },
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier",
-          "sh:description": {
-            "en": "An Identifier for the Event."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name",
-          "sh:description": {
-            "en": "The Name (or title) of the Event."
-          },
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "sh:uniqueLang": "true"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/c0d17764e84e711728581fda7356a51e99a9040a",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier",
-          "sh:description": {
-            "en": "An Identifier for the Event."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description",
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "en": "A free text description of the Event."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        }
-      ],
-      "sh:targetClass": "http://data.europa.eu/m8g/Event"
-    },
-    {
-      "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type",
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "en": "It links an Event to a controlled vocabulary of event types."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type",
-          "sh:description": {
-            "en": "It links an Event to a controlled vocabulary of event types."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "http://data.europa.eu/m8g/LifeEvent"
-    },
-    {
       "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1845,18 +1686,6 @@
             "en": "name"
           },
           "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby",
-          "sh:description": {
-            "en": "It links the Public Service to the Event class."
-          },
-          "sh:name": {
-            "en": "is grouped by"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://data.europa.eu/m8g/isGroupedBy"
         },
         {
           "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1977,18 +1806,6 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true"
-        },
-        {
-          "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6",
-          "rdfs:seeAlso": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby",
-          "sh:class": "http://data.europa.eu/m8g/Event",
-          "sh:description": {
-            "en": "It links the Public Service to the Event class."
-          },
-          "sh:name": {
-            "en": "is grouped by"
-          },
-          "sh:path": "http://data.europa.eu/m8g/isGroupedBy"
         },
         {
           "@id": "https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",

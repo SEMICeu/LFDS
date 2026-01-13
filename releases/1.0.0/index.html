@@ -62,8 +62,30 @@
 	    
 		
 		   {
-		    name: "DIGIT B2 ",
+		    name: "Davide Audrito",
 		      
+		      
+		    company: "European Commission",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Cecile Guash",
+		      
+		      
+		    company: "European Commission",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Alessio Nardin",
+		      
+		      
+		    company: "European Commission",
 		      
 		      
 		    }
@@ -88,7 +110,7 @@
       edDraftURI: "https://semiceu.github.io/LFDS/releases/1.0.0",
       latestVersion: "https://semiceu.github.io/LFDS/releases/0.2.0/",
       specStatus: "LD",
-      publishDate: "2025-12-17",
+      publishDate: "2026-01-13",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/LFDS",
@@ -179,8 +201,8 @@
 
 <section id="abstract">
     <h2>Abstract</h2>
-The LFDS Vocabulary is a simplified, reusable and extensible data model that provides a minimum set of classes and properties for
-describing and assessment on the requirements of digital as described in the LFDS guidelines.
+TThe LFDS Vocabulary is
+a simplified, reusable, and extensible data model that provides a minimum set of classes and properties for describing and assessing digital requirements, as defined in the LFDS guidelines.
 </section>
 
 
@@ -202,7 +224,7 @@ describing and assessment on the requirements of digital as described in the LFD
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Vocabulary has the status Draft published at 2025-12-17.
+            This Vocabulary has the status Draft published at 2026-01-13.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/LFDS/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -288,11 +310,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
 			      <a href="#ActionResult">Action Result</a> |
 			      <a href="#Agent">Agent</a> |
 			      <a href="#Assessment">Assessment</a> |
-			      <a href="#DataFlow">Data Flow</a> |
-			      <a href="#Event">Event</a> |
 			      <a href="#LegalExpression">Legal Expression</a> |
 			      <a href="#Requirement">Requirement</a> |
-			      <a href="#RequirementofDigitalRelevance">Requirement of Digital Relevance</a> |
 			      <a href="#Statement">Statement</a> |
 			      <a href="#TemporalEntitySpecification">Temporal Entity Specification</a> |
 			      <a href="#WorkFlow">Work Flow</a> |
@@ -301,13 +320,11 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             The main entities are supported by:
                             <br />
                             |
-			      <a href="#AgentCategory">Agent Category</a> |
 			      <a href="#AgentRole">Agent Role</a> |
-			      <a href="#BusinessEvent">Business Event</a> |
+			      <a href="#AgentType">Agent Type</a> |
 			      <a href="#Dataset">Dataset</a> |
 			      <a href="#DigitalSolution">Digital Solution</a> |
 			      <a href="#Identifier">Identifier</a> |
-			      <a href="#LifeEvent">Life Event</a> |
 			      <a href="#Location">Location</a> |
 			      <a href="#Manifestation">Manifestation</a> |
 			      <a href="#PublicService">Public Service</a> |
@@ -720,7 +737,7 @@ The main entities are those that form the core of the Vocabulary.
                         Usage Note
                     </dt>
                     <dd>
-                        It could be an activity (e.g.,to do something) or an physical or digital entiity (e.g.,report).
+                        It could be an activity (e.g.,to do something) or a physical or digital entiity (e.g.,report).
                     </dd>
                 
                 
@@ -1001,7 +1018,7 @@ The main entities are those that form the core of the Vocabulary.
                                 <td>
                                     
                                         
-                                            <a href="#AgentCategory" data-placement="right">Agent Category</a>
+                                            <a href="#AgentType" data-placement="right">Agent Type</a>
                                         
                                     
                                 </td>
@@ -1079,6 +1096,9 @@ given scenario.
                         <dd>
                             For this entity the following properties are defined: <a href="#Assessment.assesses">assesses</a>
                             , <a href="#Assessment.assesses">assesses</a>
+                            , <a href="#Assessment.assesses">assesses</a>
+                            , <a href="#Assessment.assesses">assesses</a>
+                            , <a href="#Assessment.assesses">assesses</a>
                             , <a href="#Assessment.description">description</a>
                             , <a href="#Assessment.policy">policy</a>
                             , <a href="#Assessment.resultsin">results in</a>
@@ -1121,6 +1141,135 @@ given scenario.
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Dataset" data-placement="right">Dataset</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#WorkFlow" data-placement="right">Work Flow</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#PublicService" data-placement="right">Public Service</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
                         
                             <tr id="Assessment.assesses"
                                 typeof="rdf:Property"
@@ -1185,7 +1334,7 @@ given scenario.
                                 <td>
                                     
                                         
-                                            <a href="#PublicService" data-placement="right">Public Service</a>
+                                            <a href="#DigitalSolution" data-placement="right">Digital Solution</a>
                                         
                                     
                                 </td>
@@ -1390,270 +1539,6 @@ given scenario.
 
 
 
-
-
-
-   
-        <section>
-            <h3 id="DataFlow">
-                <a href="http://data.europa.eu/2qy/lfds#DataFlow"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/2qy/lfds#DataFlow"
-                   data-placement="right">Data Flow</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20DataFlow&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    An action which describes the flow of data from one to another point.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="#WorkFlow">Work Flow</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-   
-        <section>
-            <h3 id="Event">
-                <a href="http://data.europa.eu/m8g/Event"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/m8g/Event"
-                   data-placement="right">Event</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Event&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Event.description">description</a>
-                            , <a href="#Event.identifier">identifier</a>
-                            , <a href="#Event.name">name</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Event.description"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/description"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Event&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Event.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/description"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/description"
-                                           data-placement="right">
-                                        description</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Text" data-placement="right">Text</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    A free text description of the Event.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Event.identifier"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/identifier"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20identifier%20in%20Event&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Event.identifier" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/identifier"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/identifier"
-                                           data-placement="right">
-                                        identifier</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    An Identifier for the Event.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Event.name"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/title"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20name%20in%20Event&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Event.name" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/title"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/title"
-                                           data-placement="right">
-                                        name</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Text" data-placement="right">Text</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The Name (or title) of the Event.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
 
 
 
@@ -1959,8 +1844,6 @@ Note that ELI ontology accommodates different point of view on what should be co
         
     </div>
 </section>
-
-
 
 
 
@@ -2373,7 +2256,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                 <td>
                                     
                                         
-                                            <a href="#Resource" data-placement="right">Resource</a>
+                                            <a href="#DigitalSolution" data-placement="right">Digital Solution</a>
                                         
                                     
                                 </td>
@@ -2416,7 +2299,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                 <td>
                                     
                                         
-                                            <a href="#DigitalSolution" data-placement="right">Digital Solution</a>
+                                            <a href="#Resource" data-placement="right">Resource</a>
                                         
                                     
                                 </td>
@@ -2511,137 +2394,6 @@ Note that ELI ontology accommodates different point of view on what should be co
                                 </td>
                                 <td property="rdfs:comment">
                                     A related resource that is required by the described resource to support its function, delivery, or coherence.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
-            <h3 id="RequirementofDigitalRelevance">
-                <a href="http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance"
-                   data-placement="right">Requirement of Digital Relevance</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20RequirementOfDigitalRelevance&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    A Requirement established by a Legal Expression which has a relevance to digital implementations.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="#Requirement">Requirement</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#RequirementofDigitalRelevance.category">category</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="RequirementofDigitalRelevance.category"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/2qy/lfds#RequirementCategory"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20category%20in%20Requirement of Digital Relevance&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23RequirementofDigitalRelevance.category" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/2qy/lfds#RequirementCategory"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/2qy/lfds#RequirementCategory"
-                                           data-placement="right">
-                                        category</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Code" data-placement="right">Code</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The categroy of the Requirement.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3297,56 +3049,6 @@ They are included in the Vocabulary because they form the range of properties.
 
    
         <section>
-            <h3 id="AgentCategory">
-                <a href="http://data.europa.eu/2qy/rrmv#AgentCategory"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/2qy/rrmv#AgentCategory"
-                   data-placement="right">Agent Category</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20AgentCategory&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    The category of Agent.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
             <h3 id="AgentRole">
                 <a href="http://data.europa.eu/2qy/rrmv#AgentRole"
                    data-toggle="tooltip"
@@ -3513,20 +3215,18 @@ They are included in the Vocabulary because they form the range of properties.
 
 
 
-
-
    
         <section>
-            <h3 id="BusinessEvent">
-                <a href="http://data.europa.eu/m8g/BusinessEvent"
+            <h3 id="AgentType">
+                <a href="http://data.europa.eu/2qy/rrmv#AgentCategory"
                    data-toggle="tooltip"
-                   data-content="http://data.europa.eu/m8g/BusinessEvent"
-                   data-placement="right">Business Event</a>
+                   data-content="http://data.europa.eu/2qy/rrmv#AgentCategory"
+                   data-placement="right">Agent Type</a>
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
 		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20BusinessEvent&body=Explain%20your%20issue"}}>
+                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20AgentType&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
 		-->
@@ -3535,7 +3235,7 @@ They are included in the Vocabulary because they form the range of properties.
                     Definition
                 </dt>
                 <dd>
-                    A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time.
+                    The category of Agent.
                 </dd>
                 
                 
@@ -3543,7 +3243,7 @@ They are included in the Vocabulary because they form the range of properties.
                     <dt>
                         Subclass of
                         <dt>
-                            <dd> <a href="#Event">Event</a>
+                            <dd> <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
                                 
                         </dd>
                     
@@ -3551,93 +3251,12 @@ They are included in the Vocabulary because they form the range of properties.
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#BusinessEvent.type">type</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="BusinessEvent.type"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/type"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20type%20in%20Business Event&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23BusinessEvent.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/type"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/type"
-                                           data-placement="right">
-                                        type</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Code" data-placement="right">Code</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It links an Event to a controlled vocabulary of event types.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -3799,9 +3418,16 @@ They are included in the Vocabulary because they form the range of properties.
                     Definition
                 </dt>
                 <dd>
-                    A Digital Solution corrseponds to an asset concerning usable within an governemental context of an digital nature. Digital solutions can range from conceptual frameworks to concrete software implementations.
+                    A digital asset that refers to the development, evolutive maintenance, or use of specific digital platforms, tools, or applications.
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The definition of Digital Solution is aligned with the Digital Solution Category, which is used to categorise requirements of digital relevance. At the moment, it does not align with the definition of digital solution used in the digital-ready policymakin
+                    </dd>
                 
                 
                     <dt>
@@ -4035,8 +3661,6 @@ They are included in the Vocabulary because they form the range of properties.
 
 
 
-
-
    
         <section>
             <h3 id="Identifier">
@@ -4077,137 +3701,6 @@ They are included in the Vocabulary because they form the range of properties.
 </section>
 
 
-
-
-
-
-
-   
-        <section>
-            <h3 id="LifeEvent">
-                <a href="http://data.europa.eu/m8g/LifeEvent"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/m8g/LifeEvent"
-                   data-placement="right">Life Event</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20LifeEvent&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    The Life Event class represents an important event or situation in a citizen&#39;s life where public services are required.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="#Event">Event</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#LifeEvent.type">type</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="LifeEvent.type"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/type"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20type%20in%20Life Event&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LifeEvent.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/type"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/type"
-                                           data-placement="right">
-                                        type</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Code" data-placement="right">Code</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It links an Event to a controlled vocabulary of event types.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
 
 
 
@@ -4507,7 +4000,6 @@ They are included in the Vocabulary because they form the range of properties.
                         <dd>
                             For this entity the following properties are defined: <a href="#PublicService.description">description</a>
                             , <a href="#PublicService.identifier">identifier</a>
-                            , <a href="#PublicService.isgroupedby">is grouped by</a>
                             , <a href="#PublicService.name">name</a>
                             , <a href="#PublicService.spatial">spatial</a>
                             .
@@ -4635,49 +4127,6 @@ They are included in the Vocabulary because they form the range of properties.
                                 </td>
                             </tr>
                         
-                            <tr id="PublicService.isgroupedby"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/m8g/isGroupedBy"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is grouped by%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23PublicService.isgroupedby" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/m8g/isGroupedBy"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/isGroupedBy"
-                                           data-placement="right">
-                                        is grouped by</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Event" data-placement="right">Event</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It links the Public Service to the Event class.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="PublicService.name"
                                 typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -4770,8 +4219,6 @@ They are included in the Vocabulary because they form the range of properties.
         
     </div>
 </section>
-
-
 
 
 
@@ -5663,17 +5110,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
-					<tr>
-						<td><a href="#AgentCategory">Agent Category</a></td>
-						<td><div class="shorten">http://data.europa.eu/2qy/rrmv#AgentCategory</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				
-			</tr>
-		
-				
 					
 						
 					
@@ -5709,6 +5145,23 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
+					<tr>
+						<td><a href="#AgentType">Agent Type</a></td>
+						<td><div class="shorten">http://data.europa.eu/2qy/rrmv#AgentCategory</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
 					
 						
 					
@@ -5743,6 +5196,42 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Assessment">Assessment</a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#Assessment</div></td>
+								<td></td>
+								<td><a href="#Assessment.assesses">assesses </a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#assesses</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Assessment">Assessment</a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#Assessment</div></td>
+								<td></td>
+								<td><a href="#Assessment.assesses">assesses </a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#assesses</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Assessment">Assessment</a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#Assessment</div></td>
+								<td></td>
+								<td><a href="#Assessment.assesses">assesses </a></td>
+								<td><div class="shorten">http://data.europa.eu/2sa/cav#assesses</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -5796,38 +5285,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
-				
-			</tr>
-		
-				
-					
-						
-							<tr>
-								<td><a href="#BusinessEvent">Business Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/BusinessEvent</div></td>
-								<td>Mandatory</td>
-								<td><a href="#BusinessEvent.type">type </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
-							</tr>
-						
-					
-					
-						
-					
-					
-						
-					
-				
-			</tr>
-		
-				
-					<tr>
-						<td><a href="#DataFlow">Data Flow</a></td>
-						<td><div class="shorten">http://data.europa.eu/2qy/lfds#DataFlow</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
 				
 			</tr>
 		
@@ -5906,55 +5363,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-						
-					
-						
-					
-				
-			</tr>
-		
-				
-					
-						
-					
-						
-							<tr>
-								<td><a href="#Event">Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td>Mandatory</td>
-								<td><a href="#Event.identifier">identifier </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Event">Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td>Mandatory</td>
-								<td><a href="#Event.name">name </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
-							</tr>
-						
-					
-					
-						
-					
-						
-					
-						
-					
-					
-						
-							<tr>
-								<td><a href="#Event">Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td>Optional</td>
-								<td><a href="#Event.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
 						
 					
 						
@@ -6062,27 +5470,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 							<tr>
-								<td><a href="#LifeEvent">Life Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/LifeEvent</div></td>
-								<td>Optional</td>
-								<td><a href="#LifeEvent.type">type </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
-							</tr>
-						
-					
-				
-			</tr>
-		
-				
-					
-						
-					
-					
-						
-					
-					
-						
-							<tr>
 								<td><a href="#Location">Location</a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/Location</div></td>
 								<td>Optional</td>
@@ -6138,8 +5525,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
@@ -6160,21 +5545,9 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
 					
 						
 					
-						
-					
-						
-							<tr>
-								<td><a href="#PublicService">Public Service</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
-								<td><a href="#PublicService.isgroupedby">is grouped by </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/isGroupedBy</div></td>
-							</tr>
 						
 					
 						
@@ -6347,27 +5720,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Requirement.requires">requires </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/requires</div></td>
-							</tr>
-						
-					
-				
-			</tr>
-		
-				
-					
-						
-					
-					
-						
-					
-					
-						
-							<tr>
-								<td><a href="#RequirementofDigitalRelevance">Requirement of Digital Relevance</a></td>
-								<td><div class="shorten">http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance</div></td>
-								<td></td>
-								<td><a href="#RequirementofDigitalRelevance.category">category </a></td>
-								<td><div class="shorten">http://data.europa.eu/2qy/lfds#RequirementCategory</div></td>
 							</tr>
 						
 					

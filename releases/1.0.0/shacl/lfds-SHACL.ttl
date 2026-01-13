@@ -7,9 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io/LFDS/releases/1.0.0> rdfs:member <https://semiceu.github.io/LFDS/releases/1.0.0#DataFlowShape>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape>,
+<https://semiceu.github.io/LFDS/releases/1.0.0> rdfs:member <https://semiceu.github.io/LFDS/releases/1.0.0#DigitalSolutionShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#WorkFlowShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#ActionShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#ActionResultShape>,
@@ -26,9 +24,6 @@
     <https://semiceu.github.io/LFDS/releases/1.0.0#LegalExpressionShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#ManifestationShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#WorkShape>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#LocationShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#TextShape>,
@@ -271,8 +266,11 @@
   shacl:path dc:type .
 
 <https://semiceu.github.io/LFDS/releases/1.0.0#AssessmentShape/5c78cfc0b2f1e3a2139614e0cdf0ace1a05783dd> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Assessment.assesses";
-  shacl:class <http://data.europa.eu/2qy/rrmv#Requirement>,
-    <http://purl.org/vocab/cpsv#PublicService>;
+  shacl:class dcat:Dataset,
+    <http://data.europa.eu/2qy/lfds#WorkFlow>,
+    <http://purl.org/vocab/cpsv#PublicService>,
+    <http://data.europa.eu/2qy/rrmv#Requirement>,
+    <http://data.europa.eu/2qy/lfds#DigitalSolution>;
   shacl:description "The reference to the asset(s) that are the object of the assessment."@en;
   shacl:name "assesses"@en;
   shacl:path <http://data.europa.eu/2sa/cav#assesses> .
@@ -319,31 +317,9 @@
   shacl:name "policy"@en;
   shacl:path <http://data.europa.eu/2qy/lfds#policy> .
 
-<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b>;
-  shacl:targetClass <http://data.europa.eu/m8g/BusinessEvent> .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type";
-  shacl:class skos:Concept;
-  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
-  shacl:name "type"@en;
-  shacl:path dc:type .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#BusinessEvent.type";
-  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
-  shacl:name "type"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:type .
-
 <https://semiceu.github.io/LFDS/releases/1.0.0#CodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#DataFlowShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://data.europa.eu/2qy/lfds#DataFlow> .
 
 <https://semiceu.github.io/LFDS/releases/1.0.0#DatasetShape> a shacl:NodeShape;
   shacl:closed false;
@@ -472,80 +448,6 @@
   shacl:name "title"@en;
   shacl:path dc:title .
 
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6cae9880e515253132af1452a38a8a5827165149>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/c0d17764e84e711728581fda7356a51e99a9040a>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
-  shacl:targetClass <http://data.europa.eu/m8g/Event> .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
-  shacl:datatype rdf:langString;
-  shacl:description "The Name (or title) of the Event."@en;
-  shacl:name "name"@en;
-  shacl:path dc:title .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
-  shacl:description "An Identifier for the Event."@en;
-  shacl:minCount 1;
-  shacl:name "identifier"@en;
-  shacl:path dc:identifier .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
-  shacl:description "A free text description of the Event."@en;
-  shacl:name "description"@en;
-  shacl:nodeKind shacl:Literal;
-  shacl:path dc:description .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
-  shacl:description "A free text description of the Event."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  shacl:uniqueLang true .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
-  shacl:description "The Name (or title) of the Event."@en;
-  shacl:minCount 1;
-  shacl:name "name"@en;
-  shacl:path dc:title .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
-  shacl:description "The Name (or title) of the Event."@en;
-  shacl:name "name"@en;
-  shacl:nodeKind shacl:Literal;
-  shacl:path dc:title .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
-  shacl:description "An Identifier for the Event."@en;
-  shacl:name "identifier"@en;
-  shacl:nodeKind shacl:Literal;
-  shacl:path dc:identifier .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.name";
-  shacl:description "The Name (or title) of the Event."@en;
-  shacl:name "name"@en;
-  shacl:path dc:title;
-  shacl:uniqueLang true .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/c0d17764e84e711728581fda7356a51e99a9040a> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.identifier";
-  shacl:description "An Identifier for the Event."@en;
-  shacl:maxCount 1;
-  shacl:name "identifier"@en;
-  shacl:path dc:identifier .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Event.description";
-  shacl:datatype rdf:langString;
-  shacl:description "A free text description of the Event."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description .
-
 <https://semiceu.github.io/LFDS/releases/1.0.0#IdentifierShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
@@ -610,24 +512,6 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/eli/ontology#embodies> .
 
-<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b>;
-  shacl:targetClass <http://data.europa.eu/m8g/LifeEvent> .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type";
-  shacl:class skos:Concept;
-  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
-  shacl:name "type"@en;
-  shacl:path dc:type .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#LifeEventShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#LifeEvent.type";
-  shacl:description "It links an Event to a controlled vocabulary of event types."@en;
-  shacl:name "type"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:type .
-
 <https://semiceu.github.io/LFDS/releases/1.0.0#LiteralShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
@@ -671,7 +555,6 @@
 <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6cae9880e515253132af1452a38a8a5827165149>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
@@ -682,7 +565,6 @@
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/b93b49bf7122a561ecc9674449665256e441faf5>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6>,
     <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
@@ -691,12 +573,6 @@
   shacl:description "A name given to the resource."@en;
   shacl:name "name"@en;
   shacl:path dc:title .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby";
-  shacl:description "It links the Public Service to the Event class."@en;
-  shacl:name "is grouped by"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <http://data.europa.eu/m8g/isGroupedBy> .
 
 <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.identifier";
   shacl:description "A formally-issued Identifier for the Public Service."@en;
@@ -758,35 +634,11 @@
   shacl:path dc:title;
   shacl:uniqueLang true .
 
-<https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.isgroupedby";
-  shacl:class <http://data.europa.eu/m8g/Event>;
-  shacl:description "It links the Public Service to the Event class."@en;
-  shacl:name "is grouped by"@en;
-  shacl:path <http://data.europa.eu/m8g/isGroupedBy> .
-
 <https://semiceu.github.io/LFDS/releases/1.0.0#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#PublicService.description";
   shacl:datatype rdf:langString;
   shacl:description "A free text Description of the Public Service."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5>,
-    <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f>;
-  shacl:targetClass <http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance> .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/531cd7ec5123506ee59bced26bfc6edc8e1589a5> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category";
-  shacl:class skos:Concept;
-  shacl:description "The categroy of the Requirement."@en;
-  shacl:name "category"@en;
-  shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
-
-<https://semiceu.github.io/LFDS/releases/1.0.0#RequirementDigitalRelevanceShape/f1249f171bcbfa12f01658d50155b64beb61e40f> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#RequirementofDigitalRelevance.category";
-  shacl:description "The categroy of the Requirement."@en;
-  shacl:name "category"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <http://data.europa.eu/2qy/lfds#RequirementCategory> .
 
 <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape> a shacl:NodeShape;
   shacl:closed false;
@@ -892,8 +744,8 @@
   shacl:path dc:references .
 
 <https://semiceu.github.io/LFDS/releases/1.0.0#RequirementShape/837ca7aadb4e9b329c60db5f35ffa3258e9a4dbb> rdfs:seeAlso "https://semiceu.github.io/LFDS/releases/1.0.0#Requirement.references";
-  shacl:class dcat:Resource,
-    <http://data.europa.eu/2qy/lfds#DigitalSolution>;
+  shacl:class <http://data.europa.eu/2qy/lfds#DigitalSolution>,
+    dcat:Resource;
   shacl:description "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en;
   shacl:name "references"@en;
   shacl:path dc:references .

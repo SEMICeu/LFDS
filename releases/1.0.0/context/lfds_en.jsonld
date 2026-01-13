@@ -10,14 +10,7 @@
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
-    "BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
-    "BusinessEvent.type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "@id"
-    },
     "Code": "http://www.w3.org/2004/02/skos/core#Concept",
-    "DataFlow": "http://data.europa.eu/2qy/lfds#DataFlow",
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "DigitalSolution": "http://data.europa.eu/2qy/lfds#DigitalSolution",
     "DigitalSolution.identifier": {
@@ -29,18 +22,8 @@
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
-    "Event": "http://data.europa.eu/m8g/Event",
-    "Event.identifier": {
-      "@id": "http://purl.org/dc/terms/identifier"
-    },
     "Identifier": "http://www.w3.org/ns/adms#Identifier",
     "LegalExpression": "http://data.europa.eu/eli/ontology#LegalExpression",
-    "LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
-    "LifeEvent.type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "@id"
-    },
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "Location": "http://purl.org/dc/terms/Location",
     "Manifestation": "http://data.europa.eu/eli/ontology#Manifestation",
@@ -49,13 +32,7 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/identifier"
     },
-    "PublicService.null": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/isGroupedBy",
-      "@type": "@id"
-    },
     "Requirement": "http://data.europa.eu/2qy/rrmv#Requirement",
-    "RequirementDigitalRelevance": "http://data.europa.eu/2qy/lfds#RequirementDigitalRelevance",
     "Resource": "http://www.w3.org/ns/dcat#Resource",
     "ResultType": "http://data.europa.eu/2qy/rrmv#ResultType",
     "Role": "http://data.europa.eu/2qy/rrmv#Role",
@@ -74,11 +51,6 @@
     "WorkFlow": "http://data.europa.eu/2qy/lfds#WorkFlow",
     "Xsd:anyURI": "http://www.w3.org/2001/XMLSchema#anyURI",
     "Xsd:boolean": "http://www.w3.org/2001/XMLSchema#boolean",
-    "category": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/2qy/lfds#RequirementCategory",
-      "@type": "@id"
-    },
     "cav:assesses": {
       "@container": "@set",
       "@id": "http://data.europa.eu/2sa/cav#assesses",
@@ -99,7 +71,6 @@
       "@type": "@id"
     },
     "dct:isPartOf": {
-      "@container": "@set",
       "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "@id"
     },
@@ -212,6 +183,11 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "null": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
     },
     "policy": {
       "@container": "@set",
