@@ -201,8 +201,8 @@
 
 <section id="abstract">
     <h2>Abstract</h2>
-TThe LFDS Vocabulary is
-a simplified, reusable, and extensible data model that provides a minimum set of classes and properties for describing and assessing digital requirements, as defined in the LFDS guidelines.
+The LFDS Vocabulary is
+a data model that provides a minimum set of classes and properties for describing and assessing digital requirements, as defined in the LFDS guidelines.
 </section>
 
 
@@ -213,7 +213,7 @@ a simplified, reusable, and extensible data model that provides a minimum set of
     
 <p>
 	The LFDS Vocabulary provides a minimal set of classes.
-  These are intended to support the Legislative Financial and Digital Statements within EU institutions and the Interoperability Assessments mandated by the Interoperable Europe Act.
+  These are intended to support the Legislative & Financial and Digital Statements within EU institutions and the Interoperability Assessments mandated by the Interoperable Europe Act.
 </p>
 
 </section>
@@ -224,7 +224,7 @@ a simplified, reusable, and extensible data model that provides a minimum set of
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Vocabulary has the status Draft published at 2026-01-13.
+            This Vocabulary has the status Recommendation published at 2026-01-13.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/LFDS/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -320,8 +320,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             The main entities are supported by:
                             <br />
                             |
+			      <a href="#AgentCategory">Agent Category</a> |
 			      <a href="#AgentRole">Agent Role</a> |
-			      <a href="#AgentType">Agent Type</a> |
 			      <a href="#Dataset">Dataset</a> |
 			      <a href="#DigitalSolution">Digital Solution</a> |
 			      <a href="#Identifier">Identifier</a> |
@@ -1018,7 +1018,7 @@ The main entities are those that form the core of the Vocabulary.
                                 <td>
                                     
                                         
-                                            <a href="#AgentType" data-placement="right">Agent Type</a>
+                                            <a href="#AgentCategory" data-placement="right">Agent Category</a>
                                         
                                     
                                 </td>
@@ -3033,15 +3033,65 @@ Note that ELI ontology accommodates different point of view on what should be co
 
 <section>
 <h2>
-   Supporting Entities
+   Supportive Entities
 </h2>
-The Supporting entities are supporting the main entities in the Vocabulary. 
+The supportive entities are supporting the main entities in the Vocabulary. 
 They are included in the Vocabulary because they form the range of properties.
 
 
 
 
 
+
+
+
+
+
+   
+        <section>
+            <h3 id="AgentCategory">
+                <a href="http://data.europa.eu/2qy/rrmv#AgentCategory"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/2qy/rrmv#AgentCategory"
+                   data-placement="right">Agent Category</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20AgentCategory&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The category of Agent.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
 
 
 
@@ -3215,56 +3265,6 @@ They are included in the Vocabulary because they form the range of properties.
 
 
 
-   
-        <section>
-            <h3 id="AgentType">
-                <a href="http://data.europa.eu/2qy/rrmv#AgentCategory"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/2qy/rrmv#AgentCategory"
-                   data-placement="right">Agent Type</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20AgentType&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    The category of Agent.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
-
-
-
-
-
 
 
    
@@ -3426,7 +3426,7 @@ They are included in the Vocabulary because they form the range of properties.
                         Usage Note
                     </dt>
                     <dd>
-                        The definition of Digital Solution is aligned with the Digital Solution Category, which is used to categorise requirements of digital relevance. At the moment, it does not align with the definition of digital solution used in the digital-ready policymakin
+                        The definition of Digital Solution is aligned with the Digital Solution Category, which is used to categorise requirements of digital relevance. At the moment, it does not align with the definition of digital solution used in the digital-ready policymaking glossary, which covers all resources published on the Interoperable Europe Portal. In the LFDS context, not all assets published on the Interoperable Europe Portal are considered digital solutions; for example, data standards and specifications are covered by Section 2 - Data.
                     </dd>
                 
                 
@@ -5110,6 +5110,17 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
+					<tr>
+						<td><a href="#AgentCategory">Agent Category</a></td>
+						<td><div class="shorten">http://data.europa.eu/2qy/rrmv#AgentCategory</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
 					
 						
 					
@@ -5141,17 +5152,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
-				
-			</tr>
-		
-				
-					<tr>
-						<td><a href="#AgentType">Agent Type</a></td>
-						<td><div class="shorten">http://data.europa.eu/2qy/rrmv#AgentCategory</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
 				
 			</tr>
 		
