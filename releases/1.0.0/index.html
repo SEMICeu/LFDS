@@ -7,7 +7,7 @@
     
 	
     <meta charset="utf-8" />
-    <title>Legislative Financial & Digital Statement Vocabulary</title>
+    <title>Legislative Financial &amp; Digital Statement Vocabulary</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -97,13 +97,24 @@
 	
 	
 		]
-		
-	function quickreference() {
-		$('#table-quickoverview').DataTable();
-	};
-	var shaclfilepath = "./shacl/lfds-SHACL.ttl" ;
+    var myowners = [
+            
+            {
+                value: "SEMIC",
+		href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            },
+	    { 
+                value: "Digital-Ready Policy-Making",
+		href: "https://interoperable-europe.ec.europa.eu/collection/digital-ready-policymaking"
+	    }
+		]
 
-   
+  function quickreference() {
+	$('#table-quickoverview').DataTable();
+		};
+
+
+
 
     var respecConfig = {
       postProcess: [quickreference],
@@ -114,7 +125,7 @@
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/LFDS",
-      shortName: "Legislative Financial Digital Statement Vocabulary",
+      shortName: "Legislative Financial &amp; Digital Statement Vocabulary",
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
@@ -183,7 +194,7 @@
     </style>
      
     <p class="copyright">
-        Copyright © 2024
+        Copyright © 2025
     </p>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -224,7 +235,10 @@ a data model that provides a minimum set of classes and properties for describin
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Vocabulary has the status Recommendation published at 2026-01-13.
+<!-- readd when SEMIC has a codelist about it process 
+	This application profile has the status <a href="Recommendation">Recommendation</a> published at 2026-01-13.
+-->
+	This application profile has the status Recommendation published at 2026-01-13.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/LFDS/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -248,15 +262,19 @@ a data model that provides a minimum set of classes and properties for describin
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2025 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2025 European Union. All material in this repository is published under the license Creative Commons Attribution 4.0 International (CC BY 4.0), unless explicitly otherwise mentioned.
         </p>
     
 </section>
 
 
-
 <section id="conformance" class="informative">
+    
+
 </section>
+
+
+
 
 
 
@@ -266,11 +284,7 @@ a data model that provides a minimum set of classes and properties for describin
         Terminology
     </h2>
         <p>
-            A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
-            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
-        </p>
-        
-This specification uses the following prefixes to shorten the URIs for readibility.
+            This specification uses the following prefixes to shorten the URIs for readibility.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -291,9 +305,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
             </tbody>
         </table>
 
-
+        </p>
 </section>
-
 
 
 <section id="specoverview">
@@ -303,7 +316,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
     <div id="overview">
                 
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Vocabulary:
+                            This document describes the usage of the following main entities for a correct usage of the Application Profile:
                             <br />
                             |
 			      <a href="#Action">Action</a> |
@@ -338,7 +351,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                 
                 
                         <p>
-                            And supported by these datatypes:
+                            And supported by these data types:
                             <br />
                             | <a href="#Code">Code</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> | <a href="#URI">URI</a> | <a href="#xsd%3AanyURI">xsd:anyURI</a> | <a href="#xsd%3Aboolean">xsd:boolean</a> |
                         </p>
@@ -361,7 +374,26 @@ This specification uses the following prefixes to shorten the URIs for readibili
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Vocabulary.
+<p>
+The main entities are those that form the core of the Application Profile. 
+The properties and their associated constraints that apply in the context of this profile are listed in a tabular form.
+Each row corresponds to one property. 
+</p><p>
+As this is the toplevel application profile for this usage context the reuse of the terms is indicated by their URIs.
+If an URI is used from another vocabulary than the namespace <code>2qy</code> it means that the information is inherited as expressed in 
+the data specification in which that URI is defined.
+</p>
+<!--
+In addition to the constraints also cross-references are provided to DCAT and DCAT-AP. For the last, to save space, the following abbreviations are used:
+<ul>
+	<li>A: reused as-is defined and expressed in DCAT-AP</li>
+	<li>E: reused with additional restrictions, additional usage notes or more specific usage expectations compared to DCAT-AP</li>
+	<li>P: profile specific extension where DCAT-AP had no requirements earlier on specified</li>
+</ul>
+This reuse qualification assessement is w.r.t. a specific version of DCAT-AP. 
+Therefore it may vary over time when new versions of DCAT-AP are created.
+-->
+
 
 
 
@@ -411,12 +443,14 @@ The main entities are those that form the core of the Vocabulary.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -432,8 +466,15 @@ The main entities are those that form the core of the Vocabulary.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -441,15 +482,16 @@ The main entities are those that form the core of the Vocabulary.
                     <tbody class="supertype">
                         
                             <tr id="Action.attime"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#rrmv:atTime"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20at time%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.attime" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#rrmv:atTime"
                                            data-toggle="tooltip"
@@ -478,21 +520,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Action.hasagentrole"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#hasAgentRole"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has agent role%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.hasagentrole" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#hasAgentRole"
                                            data-toggle="tooltip"
@@ -521,21 +573,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Action.hasnext"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#hasNext"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has next%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.hasnext" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#hasNext"
                                            data-toggle="tooltip"
@@ -564,21 +626,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Action.hasPart"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/hasPart"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has Part%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.hasPart" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/hasPart"
                                            data-toggle="tooltip"
@@ -607,21 +679,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Action.hasresult"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#hasResult"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has result%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.hasresult" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#hasResult"
                                            data-toggle="tooltip"
@@ -650,21 +732,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Action.relatedto"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#related_to"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20related to%20in%20Action&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Action.relatedto" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#related_to"
                                            data-toggle="tooltip"
@@ -693,15 +785,30 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -759,12 +866,14 @@ The main entities are those that form the core of the Vocabulary.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -780,8 +889,15 @@ The main entities are those that form the core of the Vocabulary.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -789,15 +905,16 @@ The main entities are those that form the core of the Vocabulary.
                     <tbody class="supertype">
                         
                             <tr id="ActionResult.hasManifestation"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#hasManifestation"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has Manifestation%20in%20Action Result&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23ActionResult.hasManifestation" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#hasManifestation"
                                            data-toggle="tooltip"
@@ -826,21 +943,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="ActionResult.hastitle"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has title%20in%20Action Result&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23ActionResult.hastitle" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/title"
                                            data-toggle="tooltip"
@@ -869,21 +996,31 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="ActionResult.hastype"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://example.com/rrmv/hasType"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has type%20in%20Action Result&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23ActionResult.hastype" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://example.com/rrmv/hasType"
                                            data-toggle="tooltip"
@@ -912,15 +1049,30 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -969,12 +1121,14 @@ The main entities are those that form the core of the Vocabulary.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -990,8 +1144,15 @@ The main entities are those that form the core of the Vocabulary.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -999,15 +1160,16 @@ The main entities are those that form the core of the Vocabulary.
                     <tbody class="supertype">
                         
                             <tr id="Agent.hascategory"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/rrmv#hasCategory"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has category%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Agent.hascategory" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/rrmv#hasCategory"
                                            data-toggle="tooltip"
@@ -1036,15 +1198,30 @@ The main entities are those that form the core of the Vocabulary.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -1113,12 +1290,14 @@ given scenario.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -1134,8 +1313,15 @@ given scenario.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -1143,187 +1329,16 @@ given scenario.
                     <tbody class="supertype">
                         
                             <tr id="Assessment.assesses"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2sa/cav#assesses"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
-                                <td>
-                                        <a href="http://data.europa.eu/2sa/cav#assesses"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/2sa/cav#assesses"
-                                           data-placement="right">
-                                        assesses</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Dataset" data-placement="right">Dataset</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The reference to the asset(s) that are the object of the assessment.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Assessment.assesses"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/2sa/cav#assesses"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/2sa/cav#assesses"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/2sa/cav#assesses"
-                                           data-placement="right">
-                                        assesses</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#WorkFlow" data-placement="right">Work Flow</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The reference to the asset(s) that are the object of the assessment.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Assessment.assesses"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/2sa/cav#assesses"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/2sa/cav#assesses"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/2sa/cav#assesses"
-                                           data-placement="right">
-                                        assesses</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#PublicService" data-placement="right">Public Service</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The reference to the asset(s) that are the object of the assessment.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Assessment.assesses"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/2sa/cav#assesses"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/2sa/cav#assesses"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/2sa/cav#assesses"
-                                           data-placement="right">
-                                        assesses</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Requirement" data-placement="right">Requirement</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The reference to the asset(s) that are the object of the assessment.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Assessment.assesses"
-                                typeof="rdf:Property"
-                                resource="http://data.europa.eu/2sa/cav#assesses"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2sa/cav#assesses"
                                            data-toggle="tooltip"
@@ -1352,21 +1367,243 @@ given scenario.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
-                            <tr id="Assessment.description"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/elements/1.1/description"
+                            <tr id="Assessment.assesses"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
                                 class="class mandatory">
+<!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#PublicService" data-placement="right">Public Service</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Requirement" data-placement="right">Requirement</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Dataset" data-placement="right">Dataset</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Assessment.assesses"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/2sa/cav#assesses"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.assesses" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://data.europa.eu/2sa/cav#assesses"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/2sa/cav#assesses"
+                                           data-placement="right">
+                                        assesses</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#WorkFlow" data-placement="right">Work Flow</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the asset(s) that are the object of the assessment.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Assessment.description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/elements/1.1/description"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.description" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/elements/1.1/description"
                                            data-toggle="tooltip"
@@ -1395,21 +1632,31 @@ given scenario.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Assessment.policy"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#policy"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20policy%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.policy" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#policy"
                                            data-toggle="tooltip"
@@ -1438,21 +1685,31 @@ given scenario.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Assessment.resultsin"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2sa/cav#resultsIn"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20results in%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.resultsin" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2sa/cav#resultsIn"
                                            data-toggle="tooltip"
@@ -1481,21 +1738,31 @@ given scenario.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Assessment.type"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20type%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Assessment.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/type"
                                            data-toggle="tooltip"
@@ -1524,15 +1791,30 @@ given scenario.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -1566,7 +1848,7 @@ given scenario.
                     Definition
                 </dt>
                 <dd>
-                    The intellectual realisation of a legal resource in the form of a &amp;quot;sequence of signs&amp;quot; (typically alpha-numeric characters in a legal context).
+                    The intellectual realisation of a legal resource in the form of a &quot;sequence of signs&quot; (typically alpha-numeric characters in a legal context).
 For example, any version of the legal resource whose content is specified and different from others for any reason: language, versions, etc.;
 
 Note that ELI ontology accommodates different point of view on what should be considered a new legal resource, or a new legal expression of the same resource. Typically, a consolidated version can be viewed, in the context of ELI, either as separate legal resource (linked to original version and previous consolidated version using corresponding ELI relations), or as a different legal expression of the same legal resource.
@@ -1594,12 +1876,14 @@ Note that ELI ontology accommodates different point of view on what should be co
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -1615,8 +1899,15 @@ Note that ELI ontology accommodates different point of view on what should be co
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -1624,15 +1915,16 @@ Note that ELI ontology accommodates different point of view on what should be co
                     <tbody class="supertype">
                         
                             <tr id="LegalExpression.cites"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#cites"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20cites%20in%20Legal Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LegalExpression.cites" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#cites"
                                            data-toggle="tooltip"
@@ -1661,21 +1953,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="LegalExpression.embodies"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#embodies"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20embodies%20in%20Legal Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LegalExpression.embodies" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#embodies"
                                            data-toggle="tooltip"
@@ -1694,7 +1996,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    Relates a manifestation to the expression that it embodies. Inverse of &quot;is_embodied_by&quot;.
+                                    Relates a manifestation to the expression that it embodies. Inverse of "is_embodied_by".
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1704,21 +2006,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="LegalExpression.ispartof"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#is_part_of"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is part of%20in%20Legal Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LegalExpression.ispartof" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#is_part_of"
                                            data-toggle="tooltip"
@@ -1747,21 +2059,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="LegalExpression.isrealizedby"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#realizes"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is realized by%20in%20Legal Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LegalExpression.isrealizedby" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#realizes"
                                            data-toggle="tooltip"
@@ -1780,7 +2102,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    Relates a work to an expression of this work in the form of a &quot;sequence of signs&quot; (typically alpha-numeric characters in a legal context).
+                                    Relates a work to an expression of this work in the form of a "sequence of signs" (typically alpha-numeric characters in a legal context).
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1790,21 +2112,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="LegalExpression.isrealizedby"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#realizes"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is realized by%20in%20Legal Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23LegalExpression.isrealizedby" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#realizes"
                                            data-toggle="tooltip"
@@ -1823,7 +2155,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    Relates a work to an expression of this work in the form of a &quot;sequence of signs&quot; (typically alpha-numeric characters in a legal context).
+                                    Relates a work to an expression of this work in the form of a "sequence of signs" (typically alpha-numeric characters in a legal context).
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1833,15 +2165,30 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -1906,12 +2253,14 @@ Note that ELI ontology accommodates different point of view on what should be co
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -1927,8 +2276,15 @@ Note that ELI ontology accommodates different point of view on what should be co
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -1936,15 +2292,16 @@ Note that ELI ontology accommodates different point of view on what should be co
                     <tbody class="supertype">
                         
                             <tr id="Requirement.changes"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#changes"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20changes%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.changes" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#changes"
                                            data-toggle="tooltip"
@@ -1973,21 +2330,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.hasTopic"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#hasTopic"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has Topic%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.hasTopic" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#hasTopic"
                                            data-toggle="tooltip"
@@ -2016,21 +2383,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.hastopic"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#hasTopic"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has topic%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.hastopic" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#hasTopic"
                                            data-toggle="tooltip"
@@ -2059,21 +2436,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.hasURI"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#hasURI"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has URI%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.hasURI" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#hasURI"
                                            data-toggle="tooltip"
@@ -2102,21 +2489,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.involvesProcess"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#involvesProcess"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20involves Process%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.involvesProcess" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#involvesProcess"
                                            data-toggle="tooltip"
@@ -2145,21 +2542,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.ispartof"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/isPartOf"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is part of%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.ispartof" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/isPartOf"
                                            data-toggle="tooltip"
@@ -2188,21 +2595,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.produces"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#produces"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20produces%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.produces" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#produces"
                                            data-toggle="tooltip"
@@ -2231,21 +2648,84 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.references"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/references"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20references%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.references" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/references"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/references"
+                                           data-placement="right">
+                                        references</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Resource" data-placement="right">Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A related resource that is referenced, cited, or otherwise pointed to by the described resource.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Requirement.references"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/references"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20references%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.references" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/references"
                                            data-toggle="tooltip"
@@ -2274,64 +2754,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Requirement.references"
-                                typeof="rdf:Property"
-                                resource="http://purl.org/dc/terms/references"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20references%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.references" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/references"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/references"
-                                           data-placement="right">
-                                        references</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Resource" data-placement="right">Resource</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    A related resource that is referenced, cited, or otherwise pointed to by the described resource.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
 				<!--
                                 <td>
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
+				        P
+				    
                                 </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.relatedto"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#related_to"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20related to%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.relatedto" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#related_to"
                                            data-toggle="tooltip"
@@ -2360,21 +2807,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Requirement.requires"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/requires"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20requires%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Requirement.requires" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/requires"
                                            data-toggle="tooltip"
@@ -2403,15 +2860,30 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -2479,12 +2951,14 @@ Note that ELI ontology accommodates different point of view on what should be co
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -2500,8 +2974,15 @@ Note that ELI ontology accommodates different point of view on what should be co
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -2509,15 +2990,16 @@ Note that ELI ontology accommodates different point of view on what should be co
                     <tbody class="supertype">
                         
                             <tr id="Statement.interpretation"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2sa/cav#interpretation"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20interpretation%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Statement.interpretation" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2sa/cav#interpretation"
                                            data-toggle="tooltip"
@@ -2546,21 +3028,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Statement.judgement"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2sa/cav#judgement"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20judgement%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Statement.judgement" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2sa/cav#judgement"
                                            data-toggle="tooltip"
@@ -2579,7 +3071,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     1..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    The text expressing the statement&#39;s resulting value judgement.
+                                    The text expressing the statement's resulting value judgement.
                                 </td>
                                 <td property="skos:scopeNote">
                                     This free text field allows more context to be provided around the judgement.
@@ -2589,21 +3081,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="Statement.type"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2sa/cav#type"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20type%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Statement.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2sa/cav#type"
                                            data-toggle="tooltip"
@@ -2632,15 +3134,30 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -2690,12 +3207,14 @@ Note that ELI ontology accommodates different point of view on what should be co
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -2711,8 +3230,15 @@ Note that ELI ontology accommodates different point of view on what should be co
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -2720,15 +3246,16 @@ Note that ELI ontology accommodates different point of view on what should be co
                     <tbody class="supertype">
                         
                             <tr id="TemporalEntitySpecification.externalevent"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#externalEvent"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20external event%20in%20Temporal Entity Specification&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23TemporalEntitySpecification.externalevent" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#externalEvent"
                                            data-toggle="tooltip"
@@ -2747,7 +3274,7 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    Indicates whether a temporal entity specification depends on events outside the regulatory framework&#39;s direct control.
+                                    Indicates whether a temporal entity specification depends on events outside the regulatory framework's direct control.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2757,21 +3284,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="TemporalEntitySpecification.isunspecified"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#isUnspecified"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is unspecified%20in%20Temporal Entity Specification&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23TemporalEntitySpecification.isunspecified" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#isUnspecified"
                                            data-toggle="tooltip"
@@ -2800,15 +3337,30 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -2861,12 +3413,14 @@ Note that ELI ontology accommodates different point of view on what should be co
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -2882,8 +3436,15 @@ Note that ELI ontology accommodates different point of view on what should be co
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -2891,15 +3452,16 @@ Note that ELI ontology accommodates different point of view on what should be co
                     <tbody class="supertype">
                         
                             <tr id="WorkFlow.high-levelProcess"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#highlevelProcess"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20high-level Process%20in%20Work Flow&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23WorkFlow.high-levelProcess" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#highlevelProcess"
                                            data-toggle="tooltip"
@@ -2928,21 +3490,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="WorkFlow.isPartOf"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/isPartOf"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is Part Of%20in%20Work Flow&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23WorkFlow.isPartOf" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/isPartOf"
                                            data-toggle="tooltip"
@@ -2971,21 +3543,31 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="WorkFlow.trigger"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/lfds#trigger"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20trigger%20in%20Work Flow&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23WorkFlow.trigger" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/lfds#trigger"
                                            data-toggle="tooltip"
@@ -3014,15 +3596,30 @@ Note that ELI ontology accommodates different point of view on what should be co
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
 
@@ -3033,10 +3630,13 @@ Note that ELI ontology accommodates different point of view on what should be co
 
 <section>
 <h2>
-   Supportive Entities
+   Supporting Entities
 </h2>
-The supportive entities are supporting the main entities in the Vocabulary. 
-They are included in the Vocabulary because they form the range of properties.
+
+Supporting entities complement the main entities in the Application Profile. 
+The scope and objectives of the profile are fully covered by the main entities; supporting entities serve as property ranges or as subclasses used in specific use cases. 
+In this context, supporting entities are those defined in the same namespace as the main entities; imported entities are listed in a subsequent section.
+
 
 
 
@@ -3090,8 +3690,16 @@ They are included in the Vocabulary because they form the range of properties.
             </dl>
         </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3139,12 +3747,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -3160,8 +3770,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -3169,15 +3786,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="AgentRole.foragent"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#forAgent"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20for agent%20in%20Agent Role&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23AgentRole.foragent" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#forAgent"
                                            data-toggle="tooltip"
@@ -3206,21 +3824,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="AgentRole.withrole"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/2qy/rrmv#withRole"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20with role%20in%20Agent Role&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23AgentRole.withrole" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/2qy/rrmv#withRole"
                                            data-toggle="tooltip"
@@ -3249,17 +3877,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3315,12 +3960,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -3336,8 +3983,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -3345,15 +3999,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Dataset.description"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Dataset.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/description"
                                            data-toggle="tooltip"
@@ -3382,17 +4037,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3449,12 +4121,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -3470,8 +4144,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -3479,15 +4160,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="DigitalSolution.description"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Digital Solution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23DigitalSolution.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/description"
                                            data-toggle="tooltip"
@@ -3516,21 +4198,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="DigitalSolution.identifier"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://www.w3.org/ns/adms#identifier"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20identifier%20in%20Digital Solution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23DigitalSolution.identifier" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://www.w3.org/ns/adms#identifier"
                                            data-toggle="tooltip"
@@ -3559,21 +4251,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     <a href="https://w3c.github.io/dxwg/dcat/#dereferenceable-identifiers">Link</a>
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="DigitalSolution.title"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20title%20in%20Digital Solution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23DigitalSolution.title" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/title"
                                            data-toggle="tooltip"
@@ -3602,21 +4304,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="DigitalSolution.type"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20type%20in%20Digital Solution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23DigitalSolution.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/type"
                                            data-toggle="tooltip"
@@ -3645,17 +4357,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3697,8 +4426,16 @@ They are included in the Vocabulary because they form the range of properties.
             </dl>
         </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3754,12 +4491,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -3775,8 +4514,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -3784,15 +4530,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Location.geographicidentifier"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Location.geographicidentifier" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"
                                            data-toggle="tooltip"
@@ -3821,17 +4568,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -3878,12 +4642,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -3899,8 +4665,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -3908,15 +4681,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Manifestation.isembodiedby"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://data.europa.eu/eli/ontology#is_embodied_by"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20is embodied by%20in%20Manifestation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Manifestation.isembodiedby" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://data.europa.eu/eli/ontology#is_embodied_by"
                                            data-toggle="tooltip"
@@ -3945,17 +4719,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4012,12 +4803,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -4033,8 +4826,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -4042,15 +4842,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="PublicService.description"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23PublicService.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/description"
                                            data-toggle="tooltip"
@@ -4079,21 +4880,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="PublicService.identifier"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20identifier%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23PublicService.identifier" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/identifier"
                                            data-toggle="tooltip"
@@ -4122,21 +4933,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="PublicService.name"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20name%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23PublicService.name" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/title"
                                            data-toggle="tooltip"
@@ -4165,21 +4986,31 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                             <tr id="PublicService.spatial"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/spatial"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20spatial%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23PublicService.spatial" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/spatial"
                                            data-toggle="tooltip"
@@ -4208,17 +5039,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4274,12 +5122,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -4295,8 +5145,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -4304,15 +5161,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Resource.description"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Resource.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/description"
                                            data-toggle="tooltip"
@@ -4341,17 +5199,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4400,8 +5275,16 @@ They are included in the Vocabulary because they form the range of properties.
             </dl>
         </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4448,12 +5331,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -4469,8 +5354,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -4478,15 +5370,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Role.hastype"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://example.com/rrmv/hasType"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20has type%20in%20Role&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Role.hastype" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://example.com/rrmv/hasType"
                                            data-toggle="tooltip"
@@ -4515,17 +5408,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4574,8 +5484,16 @@ They are included in the Vocabulary because they form the range of properties.
             </dl>
         </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4629,12 +5547,14 @@ They are included in the Vocabulary because they form the range of properties.
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -4650,8 +5570,15 @@ They are included in the Vocabulary because they form the range of properties.
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -4659,15 +5586,16 @@ They are included in the Vocabulary because they form the range of properties.
                     <tbody class="supertype">
                         
                             <tr id="Specification.description"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20description%20in%20Specification&body=Explain%20your%20issue%20for%20https://semiceu.github.io/LFDS/releases/1.0.0%23Specification.description" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="http://purl.org/dc/terms/description"
                                            data-toggle="tooltip"
@@ -4696,17 +5624,34 @@ They are included in the Vocabulary because they form the range of properties.
                                     
                                 </td>
 				-->
+				<!--
                                 <td>
                                     
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    
+				        P
+				    
+                                </td>
+				-->
                             </tr>
                         
                     </tbody>
                 </table>
             </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
 
 
 
@@ -4752,8 +5697,76 @@ They are included in the Vocabulary because they form the range of properties.
             </dl>
         </div>
         
+
+                   
+
+	  
+
+
     </div>
 </section>
+
+
+
+
+
+
+
+
+</section>
+
+<section>
+<h2>
+   Imported Supporting Entities
+</h2>
+The supporting entities are supporting the main entities in the Application Profile. 
+The scope and objectives of the Application profile is fully covered with the main entities.
+The listed entities are supporting because they form the range of properties 
+or are detailed subclasses exploring specific aspects of some use cases. 
+In this application profile, the supporting imported entities are those that are defined in a different namespace from the main entities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4765,16 +5778,18 @@ They are included in the Vocabulary because they form the range of properties.
 
     <section>
         <h2>
-            Datatypes
+            Data Types
         </h2>
 
-	The following datatypes are used within this specification.
+	The following data types are used within this specification.
 
 	<table class="data-table simple" id="table-mandatory-classes">
 	    <thead>
 		<tr class="data-table__header">
+			<!---
 		    <th class="data-table__header-title--sortable">
 		    </th>
+		    --->
 		    <th class="data-table__header-title--sortable data-table__header-title--sortable-active">
 			Class
 		    </th>
@@ -4785,11 +5800,14 @@ They are included in the Vocabulary because they form the range of properties.
 	    </thead>
 	    <tbody class="supertype">
             
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="Code">
                         <a href="http://www.w3.org/2004/02/skos/core#Concept"
@@ -4801,11 +5819,14 @@ They are included in the Vocabulary because they form the range of properties.
 		</td><td>
                     An idea or notion; a unit of thought.
 		</td></tr>
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="Literal">
                         <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -4817,11 +5838,14 @@ They are included in the Vocabulary because they form the range of properties.
 		</td><td>
                     The class of literal values,eg. textual strings and integers.
 		</td></tr>
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Text&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="Text">
                         <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -4833,11 +5857,14 @@ They are included in the Vocabulary because they form the range of properties.
 		</td><td>
                     The text data type is a combination of a string and a language identifier.
 		</td></tr>
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Uri&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="URI">
                         <a href="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -4849,11 +5876,14 @@ They are included in the Vocabulary because they form the range of properties.
 		</td><td>
                     anyURI represents an Internationalized Resource Identifier Reference (IRI).  An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be an IRI Reference).
 		</td></tr>
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Xsd:anyuri&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="xsd%3AanyURI">
                         <a href="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -4865,11 +5895,14 @@ They are included in the Vocabulary because they form the range of properties.
 		</td><td>
                     An anyURI represents an Internationalized Resource Identifier Reference (IRI).
 		</td></tr>
+	    <!--
 		<tr><td>
                    <a href="https://github.com/SEMICeu/LFDS/issues/new?title=Issue%20for%20Xsd:boolean&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 
                     <div id="xsd%3Aboolean">
                         <a href="http://www.w3.org/2001/XMLSchema#boolean"
@@ -4896,7 +5929,7 @@ They are included in the Vocabulary because they form the range of properties.
          (non normative)
         
             <p>
-                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/LFDS/releases/1.0.0/context/lfds.jsonld"
+                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="/LFDS/releases/1.0.0/context/lfds.jsonld"
     target="_blank">/LFDS/releases/1.0.0/context/lfds.jsonld</a>
             </p>
         
@@ -4910,31 +5943,38 @@ They are included in the Vocabulary because they form the range of properties.
          (non normative)
         
             <p>
-                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/LFDS/releases/1.0.0/shacl/lfds-SHACL.ttl"
+                A reusable SHACL template for this application profile is retrievable at: <a href="/LFDS/releases/1.0.0/shacl/lfds-SHACL.ttl"
     target="_blank">/LFDS/releases/1.0.0/shacl/lfds-SHACL.ttl</a>
             </p>
         
     </div>
 </section>
+
+
+<section class="informative">
+    <h2 aria-level="1" role="heading" id="h2_sotd">
+        Examples
+    </h2>
+    <div class="region region--no-space-top" id="examples">
+        
+
+    </div>
+</section>
+
 -->
 
 
-
-
-
+<section class="informative">
+	<h2>Usage Guidelines</h2>
+</section>
  
-
-
- 
-
-
 
 <section id="quick-reference" class="appendix">
 
 <h2>Quick Reference of Classes and Properties</h2>
 
 This section provides a condensed tabular overview of the mentioned classes and properties in this specification.
-The properties are indicated as <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
+The properties are grouped under headings <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
 <ul>
 <li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
 <li>Recommended property: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
@@ -5958,9 +6998,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	<tbody>
 </table>
 
-
-   
-   
+</section>
 
 
 <!-- This must be at the end of the template, to ensure that the iterator properly works -->
@@ -5973,33 +7011,20 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
-{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
-{'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
-{'pref':'frbr:', 'ns': 'http://iflastandards.info/ns/fr/frbr/frbroo/'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
 {'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'rrmv:', 'ns': 'http://data.europa.eu/2qy/rrmv#'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
 {'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
-{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
-{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
-{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
-{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
-{'pref':'schema:', 'ns': 'https://schema.org/'},
-{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
-{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
-{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
-{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
-{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
-
-
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
 				];
 
 	    function shorturl (url) {
@@ -6086,6 +7111,30 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 		background-color:dodgerblue;
 		color:white;
 	}
+	table.simple {
+		font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
+	}
+
+    body.darkmode .simple th{background:#005a9c94;color:#ddd}
+	body.darkmode .simple th a{color:#ddd}
+	body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+
+    body.darkmode :is(h4,h5,h6)+a.self-link::before {
+        color: var(--heading-text);
+    }
+    body.darkmode img {
+        background: none;
+    }
+    
+    .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+	.simple th a{color:#fff;padding:3px 5px;text-align:left}
+	.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+	.simple td{padding:3px 10px;border-top:1px solid #ddd}
+	.simple tr:nth-child(even){background:#f0f6ff}
+    
   </style>
 
     	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
